@@ -1,0 +1,15 @@
+{"id": "en-explanation_shortening-01", "text": "The green card reserves a workshop place; the orange card only puts its holder on the waiting list. Both ask for a name and contact number. A volunteer collects them at the afternoon’s end. Collection does not turn an orange card into a reservation: a place requires a cancellation and the organizer’s confirmation by phone. Green-card holders need no extra call."}
+{"id": "fr-explanation_shortening-01", "text": "La carte carrée permet d’emprunter un jeu jusqu’à la séance suivante, à condition d’inscrire son titre dans le cahier des prêts. La carte ronde permet uniquement de jouer sur place : même si elle porte votre prénom, elle ne permet pas d’emporter un jeu. Les deux cartes portent le prénom de leur titulaire et se trouvent dans des pochettes transparentes, près du catalogue. Les jeux marqués d’une étoile restent toujours dans la salle, quelle que soit la carte."}
+{"id": "ru-explanation_shortening-01", "text": "Белый жетон позволяет работать за общим столом, синий — ещё и пользоваться резаком. На обоих указано имя участника; жетоны выдают у стойки. За общий стол можно садиться сразу с любым из этих двух жетонов. Для работы с резаком одного синего жетона недостаточно: ведущий должен сначала показать, как им пользоваться, и лично разрешить работу. Это дополнительное разрешение нужно только для резака. Даже после инструктажа пользоваться им можно только в присутствии ведущего."}
+{"id": "route-en-arithmetic-01", "text": "20"}
+{"id": "route-en-extraction-01", "text": "ARC-14\nSTL-08"}
+{"id": "route-en-grounded_fact-01", "text": "C"}
+{"id": "route-en-minimal_typo-01", "text": "The blue basket is empty."}
+{"id": "route-fr-arithmetic-01", "text": "14"}
+{"id": "route-fr-extraction-01", "text": "RUB-32\nENV-17"}
+{"id": "route-fr-grounded_fact-01", "text": "5"}
+{"id": "route-fr-minimal_typo-01", "text": "La petite boîte est fermée."}
+{"id": "route-ru-arithmetic-01", "text": "23"}
+{"id": "route-ru-extraction-01", "text": "TWR-26\nBRG-09"}
+{"id": "route-ru-grounded_fact-01", "text": "7"}
+{"id": "route-ru-minimal_typo-01", "text": "На столе лежит зелёный карандаш."}

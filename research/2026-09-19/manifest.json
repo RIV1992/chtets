@@ -1,0 +1,85 @@
+{
+  "scope": "Original public annotations and development scenarios; no raw third-party corpus",
+  "files": [
+    {
+      "path": "Chtets_Annotated_Corpus_EN.md",
+      "sha256": "581b0a5ac2465487b57e808fd5d2c44161892971a06d6b507f20508db22db05a",
+      "bytes": 80565
+    },
+    {
+      "path": "README.md",
+      "sha256": "1cc577dc50e804237f9a25060de3cd3d09e9ef6b29e81708f9598edfe447f1c6",
+      "bytes": 1381
+    },
+    {
+      "path": "corpus.jsonl",
+      "sha256": "08cf335b203410bb988b17a2faad9ef4325c0192e33f9db85028d2f1938e7454",
+      "bytes": 76245
+    },
+    {
+      "path": "corpus.schema.json",
+      "sha256": "e53f5d891801d65f28d0ff1b73f935c477842887c190d34c166549452d1e85aa",
+      "bytes": 2563
+    },
+    {
+      "path": "evaluation-protocol.md",
+      "sha256": "b563a1534b8f86fc86c7db6954a04c6e7d13589129663af8c0be11e6148f0f51",
+      "bytes": 5419
+    },
+    {
+      "path": "evaluation-seeds-notes.md",
+      "sha256": "167b94d37c543a41d69aaa46153119e22775e2b4b5fa63222807da6e2d53cf4e",
+      "bytes": 4146
+    },
+    {
+      "path": "evaluation-seeds.jsonl",
+      "sha256": "22ada301eb09144c7a9791700857ee2989ef6dde84ff1ce4b1d260d7604a8c28",
+      "bytes": 23183
+    },
+    {
+      "path": "methodology.md",
+      "sha256": "2d995a2168b9f4aeb54925f86ca5e7f7edb50906b03f19d401c1c87111cf8dcc",
+      "bytes": 6870
+    },
+    {
+      "path": "resource-register.md",
+      "sha256": "1694ae5c99165de74b89eecad65a85fdea3783c916042b66d38e25f2aad26788",
+      "bytes": 12074
+    },
+    {
+      "path": "search-logs/coherence.md",
+      "sha256": "e9392d73f13533191069dd4f2acfecb0c3798fa5514570c4d4d54893305b5af8",
+      "bytes": 4960
+    },
+    {
+      "path": "search-logs/editorial-foundation.md",
+      "sha256": "dc34734244a0c83ea46aca974e44d92f7bc102c168fb380edd59912645325821",
+      "bytes": 974
+    },
+    {
+      "path": "search-logs/evaluation.md",
+      "sha256": "b45414e3098d5d93b2c2027fc980f918ae755f12f2f59f2f1232597f9f61f9bf",
+      "bytes": 5190
+    },
+    {
+      "path": "search-logs/fidelity.md",
+      "sha256": "9870fcc80c7ad4ea4da74eae51161f7b035d63f96bc85c0fb9d24b5bd9cbee82",
+      "bytes": 5248
+    },
+    {
+      "path": "search-logs/research.md",
+      "sha256": "6cf9de6bb4062473ba02b745a9d7e62a3a24118e107e9aed547e3c220ac53479",
+      "bytes": 1711
+    },
+    {
+      "path": "search-logs/revision.md",
+      "sha256": "b84b4ca0e9898f0a0ef7f5c6f0208297b217e2f54dbdee91854febc894a20a0f",
+      "bytes": 4080
+    },
+    {
+      "path": "search-logs/voice.md",
+      "sha256": "4c9d7ba0b4e9a595b487bb0afd724d158b56ba51cef01015b7d54ea1197f7596",
+      "bytes": 4650
+    }
+  ]
+}

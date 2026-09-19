@@ -1,0 +1,17 @@
+{
+  "C1": {
+    "title": "Scope check",
+    "addition": "For a consequential assertion, match population, time window, comparator, quantity, and degree of certainty to its support. Do not expand “in this sample” into a general rule or omit the comparison that gives a result meaning.",
+    "scope": "development probe on reused pilot inputs; not held-out confirmation"
+  },
+  "C2": {
+    "title": "Dependent span",
+    "addition": "After a local edit, inspect its dependent span: pronouns, repeated terms, conditions, and later conclusions that relied on the changed phrase. Repair the affected connection, then confirm that neighboring sentences still refer to the same facts.",
+    "scope": "development probe on reused pilot inputs; not held-out confirmation"
+  },
+  "C3": {
+    "title": "Located repair",
+    "addition": "Before revising again, locate a specific defect and name its consequence. Make the smallest effective repair and compare it with the prior version. Keep the prior version when the repair adds no value or changes protected meaning.",
+    "scope": "development probe on reused pilot inputs; not held-out confirmation"
+  }
+}

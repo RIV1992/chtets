@@ -1,0 +1,65 @@
+{
+  "measurement": "Unique file word inventory per 12-case language batch; self-reported reads, not a measured per-task token or latency total. No averaging per request.",
+  "batches": [
+    {
+      "condition": "A",
+      "language_batch": "en",
+      "files": [
+        "SKILL.md",
+        "references/genres.md",
+        "references/author-voice.md",
+        "references/composition.md",
+        "references/evidence.md"
+      ],
+      "unique_skill_file_words": 4730
+    },
+    {
+      "condition": "A",
+      "language_batch": "fr",
+      "files": [
+        "SKILL.md",
+        "references/author-voice.md",
+        "references/genres.md",
+        "references/evidence.md",
+        "references/composition.md"
+      ],
+      "unique_skill_file_words": 4730
+    },
+    {
+      "condition": "A",
+      "language_batch": "ru",
+      "files": [
+        "SKILL.md",
+        "references/genres.md",
+        "references/author-voice.md",
+        "references/evidence.md"
+      ],
+      "unique_skill_file_words": 3548
+    },
+    {
+      "condition": "B",
+      "language_batch": "en",
+      "files": [
+        "SKILL.md"
+      ],
+      "unique_skill_file_words": 792
+    },
+    {
+      "condition": "B",
+      "language_batch": "fr",
+      "files": [
+        "SKILL.md",
+        "references/evidence.md"
+      ],
+      "unique_skill_file_words": 1258
+    },
+    {
+      "condition": "B",
+      "language_batch": "ru",
+      "files": [
+        "SKILL.md"
+      ],
+      "unique_skill_file_words": 792
+    }
+  ]
+}

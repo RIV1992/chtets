@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 — 2026-09-19
+
+- Reduced the core from 1,248 to 792 whitespace words and all skill Markdown from 5,960 to 3,048 words; optional references resolve specific difficulties.
+- Added self-contained compact and extended prompts, generated from the same source. The default manual prompt is 838 words; research stays outside runtime instructions.
+- Published 34 original research annotations with source/version boundaries, search logs, resource terms, and development scenarios.
+- Recorded a fresh 36-task A/B comparison in English, French, and Russian, plus 27 individual-mechanism development probes. No critical compression regression was reported on these inputs; no general quality gain is established.
+- Kept three research additions outside the released workflow because the probes did not show incremental benefit.
+- Added seven packaging regression checks, reproducible size reports, archive boundaries, and CI checks for generated documents.
+
 ## 1.0.0 — 2026-09-19
 
 Initial English public release.

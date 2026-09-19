@@ -75,7 +75,9 @@ The package follows the `SKILL.md` folder structure used by Agent Skills clients
 
 These are documentation-checked installation routes, not a claim that every client/version has passed an end-to-end test. Invocation, file access, and web research depend on the host agent.
 
-For chat apps without native skills, attach or paste the generated [portable prompt](docs/portable-prompt.md) with your task. It contains the complete instructions and reference material in one file. That applies the guidance to the conversation; it does not install an automatically discovered skill.
+For chat apps without native skills, attach or paste the [compact prompt](docs/portable-prompt.md) with your task. It contains the core workflow in one self-contained file. The [extended prompt](docs/portable-prompt-extended.md) also includes the five operational guides. Pasting it supplies all of that text, even if the agent only uses one section. Neither prompt installs an automatically discovered skill.
+
+The native core is **792 words**; the compact prompt is **838 words**, down from the previous 6,087-word all-in-one prompt. These are whitespace word counts, not model tokens. References load only when a task needs them. See the [size report](docs/context-size.json) for reproducible counts.
 
 ## What's inside
 
@@ -87,6 +89,8 @@ For chat apps without native skills, attach or paste the generated [portable pro
 | [`docs/customization.md`](docs/customization.md) | Optional personal style and project conventions |
 | [`docs/research.md`](docs/research.md) | Research influence and limits of the evidence |
 | [`docs/evaluation.md`](docs/evaluation.md) | What has been checked and how to evaluate a change |
+| [`research/2026-09-19/`](research/2026-09-19/) | 34 annotated sources, limitations, search logs, and development scenarios |
+| [`docs/development.md`](docs/development.md) | Rule ownership, context budgets, and criteria for new instructions |
 | [`examples/tasks.md`](examples/tasks.md) | Ready-to-use requests with synthetic source material |
 | [`scripts/`](scripts/) | Dependency-free validation and reproducible packaging |
 
@@ -94,7 +98,7 @@ Keep the entire `skills/chtets` folder when installing: the main file links to i
 
 ## Evidence and limits
 
-The [research notes](docs/research.md) explain how a critical reading of QuestBench informed the evidence checks and how the editorial guidance was developed separately. The [evaluation notes](docs/evaluation.md) document what has been tested and its limits. These checks do not establish a general improvement in writing quality.
+The [research notes](docs/research.md) explain how QuestBench informed the evidence checks and how research on coherence, factual fidelity, revision, voice, and evaluation informs further development. Findings, proposed transfers, and tests are recorded separately. The research corpus stays outside the installed writing workflow. The [evaluation notes](docs/evaluation.md) document what has been tested and its limits; they do not establish a general improvement in writing quality.
 
 Chtets can guide an agent's decisions. It cannot guarantee factual correctness, access unavailable sources, or reproduce an author's voice without adequate material.
 
@@ -104,10 +108,11 @@ A useful contribution starts with a writing task where the current guidance fail
 
 ```bash
 python3 scripts/validate.py
+python3 -m unittest discover -s tests
 python3 scripts/package.py
 ```
 
-Packaging produces a portable skill ZIP, a full source ZIP, and SHA-256 checksums. On Windows, `python` or `py -3` can replace `python3`.
+Packaging produces compact and extended prompts, a size report, a portable skill ZIP, a full source ZIP, and SHA-256 checksums. On Windows, `python` or `py -3` can replace `python3`.
 
 ## License
 

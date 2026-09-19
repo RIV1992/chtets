@@ -1,0 +1,25 @@
+{
+  "C3": {
+    "pairs": 15,
+    "preferences": {
+      "tie": 15
+    },
+    "critical_failure_outputs": {}
+  },
+  "C2": {
+    "pairs": 6,
+    "preferences": {
+      "B": 1,
+      "tie": 5
+    },
+    "critical_failure_outputs": {}
+  },
+  "C1": {
+    "pairs": 6,
+    "preferences": {
+      "tie": 5,
+      "B": 1
+    },
+    "critical_failure_outputs": {}
+  }
+}

@@ -1,41 +1,23 @@
 # Author voice
 
-Use this reference when writing on behalf of someone or applying a supplied author profile. The current request takes priority over general preferences. A profile describes writing choices; it is not a source of biographical facts.
+Use when writing for someone or applying a supplied profile. Current instructions take priority; a profile describes writing choices, not biographical facts.
 
-## Establish the voice from available evidence
+## Establish relevant preferences
 
-Use explicit instructions, the author's supplied writing, and accepted edits in the available conversation. Distinguish a stated preference from a tentative inference. Do not claim access to earlier conversations or private material you cannot read.
+Use explicit instructions, supplied writing, and accepted edits available in the conversation. Do not claim access to unavailable history. Distinguish stated preferences from tentative inferences.
 
-Look for decisions that affect this text: directness, formality, preferred terms, paragraph rhythm, degree of personal presence, greetings, sign-offs, and tolerance for rhetorical devices. Identify the intended audience and language before applying them.
+Identify audience and language, then relevant choices: directness, formality, terms, paragraph rhythm, personal presence, greetings, sign-offs, and rhetorical devices. A gentler complaint does not establish a permanent ban on firmness. One author's sign-off is not a language-wide convention; an interview voice need not match a technical report.
 
-Do not infer a permanent rule from one revision. “Make this complaint gentler” does not mean “avoid a firm position in every letter.” A sign-off selected for one author is not a language-wide convention. An interview voice may differ from that author's technical report.
+Ask a focused question only if an unknown preference substantially changes the result. Otherwise, use a natural register the author can revise. Treat samples as evidence of choices, not a rigid formula.
 
-If a missing preference would substantially change the result, ask a focused question. Otherwise, use a natural register suitable for the task and let the author revise it.
+## Preserve the author and editing scope
 
-## Keep preference, fact, and authority separate
+Use actual positions, observations, and decision criteria. “I believe,” “I do,” “our team requires,” and “we proved” make different claims. First-person pronouns alone do not create personal voice. Do not manufacture anecdotes, toughness, vulnerability, management rituals, or promises.
 
-| Material | How to use it |
-| --- | --- |
-| Explicit current instruction | Apply it within the requested task |
-| Supplied author profile | Apply relevant preferences; check their scope |
-| Accepted edits or writing samples | Use as evidence of choices, not a rigid style formula |
-| A possible preference inferred from a sample | Treat as tentative; do not turn it into a permanent rule |
-| Biography, team practices, memories, or results | Include only when supplied or otherwise appropriately established |
+Keep characteristic expressions that suit the audience. Correct accidental mistakes and ambiguity without imitating errors as style. In substantive editing, improve order and connections while retaining the position. In light proofreading, preserve wording, sequence, and idiosyncrasies except where corrections are permitted.
 
-A first-person pronoun does not create a personal voice. Use the author's actual position, observations, and criteria for decisions. “I believe,” “I do,” “our team requires,” and “we proved” make different claims.
+For verbatim transcripts, recollections, quotations, or testimony, place factual concerns in separate notes rather than silently correcting the speaker. When adapting, preserve the original and clearly distinguish the adaptation.
 
-Keep characteristic expressions when they work for the audience. Correct accidental typos and ambiguity without imitating mistakes as a style. Do not manufacture toughness, vulnerability, anecdotes, management rituals, or promises to make the writing seem personal.
+A profile can be supplied directly in the request; no account, memory feature, or file is required. Do not silently save preferences. When asked to update a profile, record the preference, reason, and scope; exclude unnecessary personal information.
 
-## Respect the permitted degree of editing
-
-In a substantive edit, improve the order and connections while preserving the position. In light proofreading, preserve the author's wording, sequence, and idiosyncrasies except for the corrections explicitly allowed.
-
-A transcript, recorded recollection, quotation, or archival testimony may need to remain verbatim. Put factual concerns in separate notes rather than silently correcting the speaker. If an adaptation is requested, preserve the original and clearly distinguish the adaptation from it.
-
-## Supplying a profile
-
-The user can include a short profile directly in the request:
-
-> Audience: project partners. Voice: direct, considerate, and concrete. Keep the request near the start. Use the supplied sign-off. Avoid claims about our team unless they appear in the source material. These preferences apply to business emails, not creative work.
-
-No account, persistent memory feature, or profile file is required. Do not silently save personal preferences. When asked to update a profile, record the preference, why it was adopted, and where it applies; exclude unnecessary personal information.
+**Done:** the text fits the author, audience, and permitted edit without turning a tentative preference into a universal rule or adding personal claims.

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import ast
+import json
 from pathlib import Path
 import re
 import sys
@@ -22,8 +23,19 @@ SOURCE_TOP_LEVEL = (
     "README.md", "LICENSE", "CHANGELOG.md", "CONTRIBUTING.md", ".gitignore",
     "NOTICE", "CITATION.cff", "SECURITY.md", "CODE_OF_CONDUCT.md",
 )
-SOURCE_DIRECTORIES = ("skills", "docs", "examples", "scripts", ".github/workflows")
 PUBLIC_EXTENSIONS = {".md", ".py", ".yaml", ".yml", ".json", ".txt", ".cff"}
+SOURCE_DIRECTORIES = {
+    directory: PUBLIC_EXTENSIONS
+    for directory in ("skills", "docs", "examples", "scripts", ".github/workflows")
+}
+# Research and evaluations belong to the source distribution, not the installed
+# skill. Keep this allowlist separate from scratch downloads and raw datasets.
+SOURCE_DIRECTORIES.update({
+    "research": {".md", ".json", ".jsonl"},
+    "evaluations": {".md", ".json", ".jsonl", ".py"},
+    "tests": {".py"},
+})
+GENERATED_PROMPTS = ("docs/portable-prompt.md", "docs/portable-prompt-extended.md")
 LINK_RE = re.compile(r"!?\[[^\]\n]*\]\(\s*(<[^>\n]+>|[^)\n]+)\s*\)")
 DEFINITION_RE = re.compile(r"^\s{0,3}\[[^\]\n]+\]:\s*(<[^>\n]+>|\S+)", re.MULTILINE)
 PRIVATE_PATTERNS = (
@@ -41,7 +53,7 @@ PRIVATE_PATTERNS = (
 def source_files(root: Path) -> list[Path]:
     """Return the explicit public source set, never build output or Git data."""
     files = {root / name for name in SOURCE_TOP_LEVEL if (root / name).is_file()}
-    for directory in SOURCE_DIRECTORIES:
+    for directory, extensions in SOURCE_DIRECTORIES.items():
         base = root / directory
         if not base.is_dir():
             continue
@@ -49,7 +61,7 @@ def source_files(root: Path) -> list[Path]:
             relative_parts = path.relative_to(base).parts
             if any(part.startswith(".") or part == "__pycache__" for part in relative_parts):
                 continue
-            if path.is_file() and path.suffix in PUBLIC_EXTENSIONS:
+            if path.is_file() and path.suffix in extensions:
                 files.add(path)
     return sorted(files, key=lambda p: p.relative_to(root).as_posix())
 
@@ -129,8 +141,10 @@ def validate(root: Path, require_prompt: bool = False) -> list[str]:
     for directory in ("docs", "examples", "skills/chtets/references"):
         if not any((root / directory).glob("*.md")):
             errors.append(f"{directory}/ must contain at least one Markdown file")
-    if require_prompt and not (root / "docs/portable-prompt.md").is_file():
-        errors.append("missing generated docs/portable-prompt.md")
+    if require_prompt:
+        for name in (*GENERATED_PROMPTS, "docs/context-size.json"):
+            if not (root / name).is_file():
+                errors.append(f"missing generated {name}")
 
     skill = root / SKILL_REL
     entrypoint = skill / "SKILL.md"
@@ -159,7 +173,7 @@ def validate(root: Path, require_prompt: bool = False) -> list[str]:
         except UnicodeError:
             errors.append(f"public source must be UTF-8 text: {relative}")
             continue
-        if path.suffix in {".md", ".yaml", ".yml"} or path.name == "LICENSE":
+        if path.suffix in {".md", ".yaml", ".yml", ".json", ".jsonl", ".txt", ".cff"} or path.name == "LICENSE":
             for pattern, description in PRIVATE_PATTERNS:
                 if re.search(pattern, text, flags=re.IGNORECASE):
                     errors.append(f"{relative}: {description}")
@@ -173,14 +187,32 @@ def validate(root: Path, require_prompt: bool = False) -> list[str]:
                 target = local_target(path, raw)
                 if target is None:
                     continue
-                if not target.is_relative_to(root):
+                if require_prompt and relative in GENERATED_PROMPTS:
+                    errors.append(f"{relative}: standalone prompt depends on a local file: {link_target(raw)}")
+                elif not target.is_relative_to(root):
                     errors.append(f"{relative}: link escapes repository: {link_target(raw)}")
                 elif path.is_relative_to(skill) and not target.is_relative_to(skill):
                     errors.append(f"{relative}: skill link is not self-contained: {link_target(raw)}")
                 elif not target.exists():
                     # The generated prompt is intentionally optional before the first build.
-                    if target != root / "docs/portable-prompt.md" or require_prompt:
+                    if target not in {root / name for name in (*GENERATED_PROMPTS, "docs/context-size.json")} or require_prompt:
                         errors.append(f"{relative}: broken local link: {link_target(raw)}")
+            if require_prompt and relative in GENERATED_PROMPTS:
+                for raw in re.findall(r"`((?:\.?\.?/)*references/[^`\n]+\.md)`", visible):
+                    errors.append(f"{relative}: standalone prompt names an unavailable file: {raw}")
+        if path.suffix in {".json", ".jsonl"}:
+            try:
+                if path.suffix == ".json":
+                    json.loads(text)
+                else:
+                    for number, line in enumerate(text.splitlines(), 1):
+                        if line.strip():
+                            try:
+                                json.loads(line)
+                            except json.JSONDecodeError as exc:
+                                raise ValueError(f"line {number}: {exc}") from exc
+            except (json.JSONDecodeError, ValueError) as exc:
+                errors.append(f"{relative}: invalid JSON: {exc}")
         if path.suffix == ".py":
             try:
                 tree = ast.parse(text, filename=relative)
@@ -194,7 +226,7 @@ def validate(root: Path, require_prompt: bool = False) -> list[str]:
                 elif isinstance(node, ast.ImportFrom) and node.level == 0 and node.module:
                     modules = [node.module.split(".")[0]]
                 for module in modules:
-                    if module not in sys.stdlib_module_names and module != "validate":
+                    if module not in sys.stdlib_module_names and module not in {"package", "validate"}:
                         errors.append(f"{relative}: non-stdlib import: {module}")
     if skill.exists():
         for path in skill.rglob("*"):
@@ -208,7 +240,7 @@ def validate(root: Path, require_prompt: bool = False) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT, help="repository root")
-    parser.add_argument("--require-prompt", action="store_true", help="also require the generated portable prompt")
+    parser.add_argument("--require-prompt", action="store_true", help="also require both standalone prompts and their size report")
     args = parser.parse_args()
     errors = validate(args.root, require_prompt=args.require_prompt)
     if errors:

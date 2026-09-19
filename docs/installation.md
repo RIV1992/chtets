@@ -77,7 +77,9 @@ This installs for local Codex. Change `$chtetsParent` for another agent. An agen
 
 ## Transfer to another device
 
-Use `chtets-v1.0.0.zip` from the [releases page](https://github.com/RIV1992/chtets/releases). It contains `chtets/SKILL.md`, `chtets/references/`, `chtets/agents/`, and `chtets/LICENSE` under one top-level `chtets/` folder. After extraction, copy `chtets/` to the new agent's destination from the table. `chtets-source-v1.0.0.zip` is the full source package, including documentation and development files.
+Copy the full `skills/chtets/` folder from the current repository, or use a versioned skill ZIP from the [releases page](https://github.com/RIV1992/chtets/releases). Check the release version: an older release may precede the current repository instructions.
+
+To build transferable archives from the current checkout, run `python3 scripts/package.py` with Python 3.10 or later. Version 1.1.0 produces `dist/chtets-v1.1.0.zip` with `chtets/SKILL.md`, `chtets/references/`, `chtets/agents/`, and `chtets/LICENSE` under one top-level folder. After extraction, copy `chtets/` to the destination in the table. `dist/chtets-source-v1.1.0.zip` additionally includes documentation, research annotations, and development files. `dist/SHA256SUMS` records both archive hashes.
 
 GitHub's **Download ZIP** contains the whole repository. In that archive, the installable folder is inside `skills/chtets/`; the repository ZIP itself is not a skill-only upload package.
 
@@ -102,7 +104,9 @@ Check the agent's skill selection or file-read activity where the product expose
 
 For an agent with native Agent Skills support, use its documented skill directory or import flow. A shared file format does not make installation paths, slash commands, or permissions identical across products.
 
-Without native support, attach the self-contained [portable prompt](portable-prompt.md), or make the full skill folder available to a file-reading agent. Ask it to read the instructions and apply them to your text. This is a prompt-based fallback: automatic discovery, selective loading, and persistence across conversations are not guaranteed. A URL alone is insufficient if the agent cannot retrieve it.
+Without native support, attach the self-contained [compact prompt](portable-prompt.md) for ordinary writing. Use the [extended prompt](portable-prompt-extended.md) when you want all five operational guides available without files. Both are generated from the same source; research and evaluation documents are excluded. The extended prompt occupies its full input size even when only one section is relevant.
+
+Ask the agent to apply the attached instructions to your task. This is a prompt-based fallback: automatic discovery and persistence across conversations are not guaranteed. A URL alone is insufficient if the agent cannot retrieve it. A file-reading agent can instead use the complete skill folder and load references selectively.
 
 Local Codex installation does not by itself install the skill into every ChatGPT surface. OpenAI documents [plugin packaging](https://learn.chatgpt.com/docs/build-skills#distribute-skills-with-plugins) for wider distribution.
 

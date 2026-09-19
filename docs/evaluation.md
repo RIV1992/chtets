@@ -2,6 +2,16 @@
 
 Separate four questions: does the package install, does the agent follow it, does the result preserve meaning, and does a reader prefer the writing?
 
+## Version 1.1.0: compact workflow
+
+A fresh synthetic set compared the previous public instructions with a compact version: 36 tasks, 12 each in English, French, and Russian. Separate writers did not see the rubrics; separate model judges received anonymous, shuffled pairs. No critical failures were reported for either condition. There were 35 ties and one preference for the compact version, involving a minor continuity issue in a French fictional scene. A stricter reading could classify that original-version issue as a constraint failure.
+
+Three separate research additions were tried on 27 reused pilot inputs. There were 25 ties and two preferences for the compact baseline. None was added to the released core. The experiment did not establish an improvement in writing quality; it supported retaining the smaller instructions without an observed critical regression on this limited set.
+
+The native core is 792 words (previously 1,248), and the default self-contained prompt is 838 words (previously 6,087). Counts are whitespace words, not tokens. A separate compact-prompt run handled three multilingual shortening tasks and 12 minimal requests without local reference access. Seven focused packaging tests check generated prompts, local-link containment, archive boundaries, and reproducibility.
+
+Read the [full protocol, findings, limitations, and saved outputs](../evaluations/2026-09-19/README.md). The runs were language batches in one host, with one sample per condition and model reviewers; exact internal computation and token use were unavailable. Human voice review, a second native client, and long-context interference were not tested. The published inputs are now development material, not an unseen test set.
+
 ## Earlier prototype
 
 Before this public English release, a personalized Russian prototype was tried on six synthetic tasks: a French payment email, an English expert comment, a Russian pilot update, a verbatim memory, a plain-language explanation, and a fictional scene.

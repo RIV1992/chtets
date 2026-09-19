@@ -1,0 +1,164 @@
+{
+  "p01": {
+    "condition": "C1",
+    "case_id": "en-explanation_shortening-01",
+    "X": "B",
+    "Y": "C1"
+  },
+  "p02": {
+    "condition": "C1",
+    "case_id": "en-sourced_analysis-01",
+    "X": "C1",
+    "Y": "B"
+  },
+  "p03": {
+    "condition": "C1",
+    "case_id": "fr-explanation_shortening-01",
+    "X": "C1",
+    "Y": "B"
+  },
+  "p04": {
+    "condition": "C1",
+    "case_id": "fr-sourced_analysis-01",
+    "X": "B",
+    "Y": "C1"
+  },
+  "p05": {
+    "condition": "C1",
+    "case_id": "ru-explanation_shortening-01",
+    "X": "C1",
+    "Y": "B"
+  },
+  "p06": {
+    "condition": "C1",
+    "case_id": "ru-sourced_analysis-01",
+    "X": "B",
+    "Y": "C1"
+  },
+  "p07": {
+    "condition": "C2",
+    "case_id": "en-explanation_shortening-02",
+    "X": "C2",
+    "Y": "B"
+  },
+  "p08": {
+    "condition": "C2",
+    "case_id": "en-interface_copy-01",
+    "X": "B",
+    "Y": "C2"
+  },
+  "p09": {
+    "condition": "C2",
+    "case_id": "fr-explanation_shortening-02",
+    "X": "B",
+    "Y": "C2"
+  },
+  "p10": {
+    "condition": "C2",
+    "case_id": "fr-interface_copy-01",
+    "X": "B",
+    "Y": "C2"
+  },
+  "p11": {
+    "condition": "C2",
+    "case_id": "ru-explanation_shortening-02",
+    "X": "C2",
+    "Y": "B"
+  },
+  "p12": {
+    "condition": "C2",
+    "case_id": "ru-interface_copy-01",
+    "X": "C2",
+    "Y": "B"
+  },
+  "p13": {
+    "condition": "C3",
+    "case_id": "en-correspondence-02",
+    "X": "B",
+    "Y": "C3"
+  },
+  "p14": {
+    "condition": "C3",
+    "case_id": "en-expert_comment_voice-01",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p15": {
+    "condition": "C3",
+    "case_id": "en-expert_comment_voice-02",
+    "X": "B",
+    "Y": "C3"
+  },
+  "p16": {
+    "condition": "C3",
+    "case_id": "en-sourced_analysis-02",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p17": {
+    "condition": "C3",
+    "case_id": "en-interface_copy-02",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p18": {
+    "condition": "C3",
+    "case_id": "fr-correspondence-02",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p19": {
+    "condition": "C3",
+    "case_id": "fr-expert_comment_voice-01",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p20": {
+    "condition": "C3",
+    "case_id": "fr-expert_comment_voice-02",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p21": {
+    "condition": "C3",
+    "case_id": "fr-sourced_analysis-02",
+    "X": "B",
+    "Y": "C3"
+  },
+  "p22": {
+    "condition": "C3",
+    "case_id": "fr-interface_copy-02",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p23": {
+    "condition": "C3",
+    "case_id": "ru-correspondence-02",
+    "X": "B",
+    "Y": "C3"
+  },
+  "p24": {
+    "condition": "C3",
+    "case_id": "ru-expert_comment_voice-01",
+    "X": "B",
+    "Y": "C3"
+  },
+  "p25": {
+    "condition": "C3",
+    "case_id": "ru-expert_comment_voice-02",
+    "X": "C3",
+    "Y": "B"
+  },
+  "p26": {
+    "condition": "C3",
+    "case_id": "ru-sourced_analysis-02",
+    "X": "B",
+    "Y": "C3"
+  },
+  "p27": {
+    "condition": "C3",
+    "case_id": "ru-interface_copy-02",
+    "X": "C3",
+    "Y": "B"
+  }
+}
