@@ -1,6 +1,6 @@
 # Chtets — Clear writing, faithful meaning
 
-A portable writing and editing skill for AI agents. Chtets helps an agent build a coherent argument, preserve facts and commitments, and adapt a draft to its reader.
+Chtets is a portable writing and editing skill for AI agents. Its workflow helps the agent clarify the purpose, connect ideas, cut unnecessary words, and preserve the author's meaning, voice, and commitments.
 
 **Install:** `npx skills add RIV1992/chtets --skill chtets` · [Installation guide](docs/installation.md) · [Examples](examples/tasks.md) · [MIT license](LICENSE)
 
@@ -14,7 +14,17 @@ Use it for emails, articles, expert comments, explanations, interface copy, and 
 | --- | --- |
 | “We will launch on Thursday.” | “We expect approval by Thursday and plan to launch once it comes through.” |
 
-The correction preserves the dependency and the uncertainty. Chtets applies the same care to paragraph transitions, claims, quotations, tone, and length.
+The correction preserves the dependency and the uncertainty.
+
+## Make the connection clear
+
+**Source facts:** test invitations are landing in spam; launch requires reliable delivery.
+
+| Draft | Edited to make the reasoning explicit |
+| --- | --- |
+| “Our test emails are landing in spam. We should delay the launch.” | “Our test emails are landing in spam, so invitees may miss them. We should delay the launch until delivery is reliable.” |
+
+The edit explains why the delivery problem matters to the launch. It keeps a possible consequence as a risk rather than reporting it as an event that has already happened. Both examples are illustrative edits based on the stated facts.
 
 ## Quick start
 
@@ -51,31 +61,11 @@ The skill itself is Markdown and has no runtime dependencies. The command above 
 
 Chtets separates two editorial passes: **meaning and evidence**, then **reader and language**. A fluent sentence still needs a sound claim; an accurate collection of facts still needs a clear line of thought.
 
-## Choose the amount of help
-
-```text
-Use Chtets. Draft a concise email from these notes.
-```
-
-```text
-Use Chtets. Cut this by half while retaining every condition and qualification.
-```
-
-```text
-Use Chtets. Review the argument against the attached sources, then rewrite it.
-Flag any important claim you could not verify.
-```
-
-```text
-Use Chtets. Proofread this transcript. Only fix obvious typos and punctuation;
-keep the wording, repetitions, and word order.
-```
-
-For a simple request, the agent should produce the text without a questionnaire or a visible editing checklist. For a substantial factual claim, it should check the supporting material when tools are available and state any consequential verification gap.
+See [example requests and source material](examples/tasks.md) for drafting, shortening, verification, transcript editing, and creative writing.
 
 ## Bring your own voice
 
-The public skill has no built-in personal biography, company pitch, or mandatory email sign-off. Give it your preferences and a few samples when they matter.
+Give the agent your style guide, a few writing samples, and any preferences that matter to the task.
 
 Copy [the author-profile example](examples/author-profile.example.md), keep the completed profile private, and explicitly ask your agent to use it. Profiles are optional; there is no automatic profile loader. See [customization](docs/customization.md) for scoped preferences and safe updates.
 
@@ -104,11 +94,9 @@ Keep the entire `skills/chtets` folder when installing: the main file links to i
 
 ## Evidence and limits
 
-Chtets grew out of a critical reading of [QuestBench](https://arxiv.org/abs/2605.21413v2), followed by separate editorial design. QuestBench evaluates research answers; it does not establish that these writing instructions improve prose. The public package includes original guidance and citations, without redistributing the benchmark corpus.
+The [research notes](docs/research.md) explain how a critical reading of QuestBench informed the evidence checks and how the editorial guidance was developed separately. The [evaluation notes](docs/evaluation.md) document what has been tested and its limits. These checks do not establish a general improvement in writing quality.
 
-An earlier, personalized Russian prototype received a small illustrative comparison. That was not a controlled efficacy study, and its results do not validate this English public release. [Evaluation notes](docs/evaluation.md) explain the distinction.
-
-The skill can guide an agent's decisions. It cannot guarantee factual correctness, access unavailable sources, or reproduce an author's voice without adequate material.
+Chtets can guide an agent's decisions. It cannot guarantee factual correctness, access unavailable sources, or reproduce an author's voice without adequate material.
 
 ## Contribute
 
