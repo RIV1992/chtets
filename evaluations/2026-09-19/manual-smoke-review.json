@@ -1,0 +1,70 @@
+{
+  "simple_tasks": [
+    {
+      "id": "route-en-arithmetic-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-en-extraction-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-en-grounded_fact-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-en-minimal_typo-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-fr-arithmetic-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-fr-extraction-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-fr-grounded_fact-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-fr-minimal_typo-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-ru-arithmetic-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-ru-extraction-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-ru-grounded_fact-01",
+      "exact_match": true
+    },
+    {
+      "id": "route-ru-minimal_typo-01",
+      "exact_match": true
+    }
+  ],
+  "writing_tasks": [
+    {
+      "id": "en-explanation_shortening-01",
+      "whitespace_words": 61,
+      "review": "Required access/reservation conditions retained; model-assisted source comparison."
+    },
+    {
+      "id": "fr-explanation_shortening-01",
+      "whitespace_words": 78,
+      "review": "Required access/reservation conditions retained; model-assisted source comparison."
+    },
+    {
+      "id": "ru-explanation_shortening-01",
+      "whitespace_words": 70,
+      "review": "Required access/reservation conditions retained; model-assisted source comparison."
+    }
+  ],
+  "limits": "One batched run in the same host with file access limited to the compact prompt and inputs. Not a second-client integration or native activation test."
+}

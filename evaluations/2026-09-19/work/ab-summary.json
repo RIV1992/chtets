@@ -1,0 +1,24 @@
+{
+  "en": {
+    "pairs": 12,
+    "preferences": {
+      "tie": 12
+    },
+    "critical_failure_outputs": {}
+  },
+  "fr": {
+    "pairs": 12,
+    "preferences": {
+      "tie": 11,
+      "B": 1
+    },
+    "critical_failure_outputs": {}
+  },
+  "ru": {
+    "pairs": 12,
+    "preferences": {
+      "tie": 12
+    },
+    "critical_failure_outputs": {}
+  }
+}

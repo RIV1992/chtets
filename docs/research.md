@@ -31,6 +31,14 @@ Chtets adds composition, paragraph function, sentence transitions, rhythm, compr
 
 Research benchmarks often make retrieval deliberately difficult. Everyday writing benefits from a direct path to adequate evidence. Chtets does not require extra searches or elaborate reasoning chains when the task is already clear.
 
+## Complementary research corpus
+
+The [September 19 corpus](../research/2026-09-19/README.md) contains 34 original annotations covering coherence, factual fidelity, revision, author voice, and evaluation. Each card records inspected source sections, findings, limits, a candidate instruction, and a way to test it. The [methodology](../research/2026-09-19/methodology.md) distinguishes direct writing research, transfer from adjacent tasks, conceptual foundations, and synthesis.
+
+The sources motivate checking population and comparison boundaries, sentence dependencies after an edit, and whether a proposed repair improves an identified defect. They also motivate evidence-aware revision and caution with author-voice judgments. These are hypotheses for Chtets, not effects established by those papers. Several already overlap the existing workflow; adding another wording is not automatically an improvement.
+
+The corpus and its public development scenarios are source documentation, excluded from the skill archive and both manual prompts. See [development](development.md) for implementation criteria and [evaluation](evaluation.md) for the observed results and untested questions.
+
 ## Source snapshot
 
 - Paper: arXiv `2605.21413v2`, dated May 21, 2026.

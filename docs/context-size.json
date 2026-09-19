@@ -1,0 +1,42 @@
+{
+  "measurement": "English whitespace words: len(text.split()); includes Markdown and frontmatter",
+  "limitations": "File sizes are not model tokens or observed task context. Native reference loading varies by task. Pasting the extended prompt supplies all its text.",
+  "words_by_file": {
+    "skills/chtets/SKILL.md": 792,
+    "skills/chtets/references/author-voice.md": 309,
+    "skills/chtets/references/composition.md": 494,
+    "skills/chtets/references/evidence.md": 466,
+    "skills/chtets/references/foundations.md": 134,
+    "skills/chtets/references/genres.md": 568,
+    "skills/chtets/references/review.md": 285,
+    "docs/portable-prompt.md": 838,
+    "docs/portable-prompt-extended.md": 2947
+  },
+  "characters_by_file": {
+    "skills/chtets/SKILL.md": 5626,
+    "skills/chtets/references/author-voice.md": 2253,
+    "skills/chtets/references/composition.md": 3417,
+    "skills/chtets/references/evidence.md": 3330,
+    "skills/chtets/references/foundations.md": 1092,
+    "skills/chtets/references/genres.md": 4292,
+    "skills/chtets/references/review.md": 1955,
+    "docs/portable-prompt.md": 5836,
+    "docs/portable-prompt-extended.md": 21157
+  },
+  "utf8_bytes_by_file": {
+    "skills/chtets/SKILL.md": 5626,
+    "skills/chtets/references/author-voice.md": 2269,
+    "skills/chtets/references/composition.md": 3457,
+    "skills/chtets/references/evidence.md": 3348,
+    "skills/chtets/references/foundations.md": 1092,
+    "skills/chtets/references/genres.md": 4301,
+    "skills/chtets/references/review.md": 1955,
+    "docs/portable-prompt.md": 5838,
+    "docs/portable-prompt-extended.md": 21242
+  },
+  "native_core_words": 792,
+  "runtime_reference_words": 2122,
+  "all_skill_markdown_words": 3048,
+  "compact_prompt_words": 838,
+  "extended_prompt_words": 2947
+}

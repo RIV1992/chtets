@@ -1,0 +1,146 @@
+{
+  "en-correspondence-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "en-correspondence-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "en-expert_comment_voice-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "en-expert_comment_voice-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "en-explanation_shortening-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "en-explanation_shortening-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "en-sourced_analysis-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "en-sourced_analysis-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "en-interface_copy-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "en-interface_copy-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "en-creative-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "en-creative-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-correspondence-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "fr-correspondence-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "fr-expert_comment_voice-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-expert_comment_voice-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-explanation_shortening-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-explanation_shortening-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "fr-sourced_analysis-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "fr-sourced_analysis-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-interface_copy-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-interface_copy-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-creative-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "fr-creative-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-correspondence-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-correspondence-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-expert_comment_voice-01": {
+    "X": "A",
+    "Y": "B"
+  },
+  "ru-expert_comment_voice-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "ru-explanation_shortening-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-explanation_shortening-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-sourced_analysis-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-sourced_analysis-02": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-interface_copy-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-interface_copy-02": {
+    "X": "A",
+    "Y": "B"
+  },
+  "ru-creative-01": {
+    "X": "B",
+    "Y": "A"
+  },
+  "ru-creative-02": {
+    "X": "B",
+    "Y": "A"
+  }
+}
