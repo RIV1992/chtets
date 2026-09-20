@@ -1,6 +1,6 @@
 # Developing a compact writing skill
 
-Version 1.1.0 established the compact workflow; version 1.1.1 cleans up its documentation and evidence archive. The writing instructions are unchanged. A small comparison found no critical compression regression on the selected tasks. Three extra research instructions showed no discriminating benefit in separate probes and were not adopted. See the [evaluation record](../evaluations/2026-09-19/README.md) for the frozen source versions, outputs, and limitations.
+Version 1.1.0 established the compact workflow; version 1.1.1 cleaned its documentation without changing writing instructions. Version 1.2.0 adds an optional [meaning map](meaning-map.md) for interdependent text and source-based reports. The [earlier comparison](../evaluations/2026-09-19/README.md) found no critical compression regression on selected tasks; three added reminders showed no discriminating benefit and were not adopted. The [new release check](../evaluations/meaning-map-v1/README.md) is separate and does not establish a general quality gain.
 
 ## Separate the questions
 
@@ -15,6 +15,7 @@ Claim boundaries, dependent spans, and purposeful revision remain useful researc
 | `SKILL.md` | Purpose, edit permission, meaning invariants, progression, appropriate verification, two short checks, delivery and routing |
 | `composition.md` | Diagnose missing connections and repair the affected span |
 | `evidence.md` | Trace an important claim to evidence and its limits |
+| `meaning-map.md` | Track material dependencies and propagate changes across a text |
 | `author-voice.md` | Apply contextual preferences without inventing facts or biography |
 | `genres.md` | Resolve a consequential genre-specific choice |
 | `review.md` | Diagnose material defects in a requested critique or complex text |
@@ -26,6 +27,8 @@ The core must work without optional files. A supplied greeting or sign-off can b
 ## Measure the material actually used
 
 Authoring targets are 650–800 English whitespace words for the core and 750–1,000 for the compact manual prompt. They are engineering targets, not empirical optima. The [generated size report](context-size.json) counts words, Unicode characters and UTF-8 bytes; these are not model tokens or billed use.
+
+Keep the optional meaning-map reference within 500 whitespace words unless concrete task evidence justifies more. Its essential dependency principle stays outside the core's replaceable routing section so the compact manual prompt retains it. Add operational references to the explicit packaging allowlist; cross-reference and archive tests must continue to pass.
 
 Source evidence, history, drafts and tool results also occupy context. Do not truncate material conditions to satisfy an instruction budget. Selective loading avoids irrelevant reads but does not remove previously loaded text from a persistent conversation. Hosts differ in what they inject and expose; report observable behavior and leave unavailable token or latency measurements unknown.
 
@@ -55,7 +58,7 @@ The builder produces two versioned archives under `dist/` and records their SHA-
 
 | Archive | Contents |
 | --- | --- |
-| `chtets-v1.1.1.zip` | One `chtets/` folder containing the skill, references, agent metadata, and license |
-| `chtets-source-v1.1.1.zip` | The public source, documentation, research annotations, evaluation evidence, and maintainer tools |
+| `chtets-v1.2.0.zip` | One `chtets/` folder containing the skill, references, agent metadata, and license |
+| `chtets-source-v1.2.0.zip` | The public source, documentation, research annotations, evaluation evidence, and maintainer tools |
 
 Build outputs and analysis caches are not source files. Research and evaluation material stay outside the installable archive and both prompts. When reorganizing recorded evidence, preserve original inputs, outputs, judgments, mappings, and source versions; regenerate joins and totals instead of storing parallel copies. See the [evaluation artifact commands](../evaluations/2026-09-19/README.md#artifacts-and-reuse).

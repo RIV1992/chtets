@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0 — 2026-09-20
+
+- Add an optional meaning map for claims, grounds, conditions, and dependencies across report sections; follow affected tables, summaries, and conclusions after an edit.
+- Clarify source reading for standards: exact editions and clauses, applicability, exceptions, and evidence of project compliance remain distinct.
+- Preserve compact routine work, restricted editing permissions, deliberate literary ambiguity, and private author profiles.
+- Include the new operational reference in the extended prompt and installable archive; retain the dependency principle in the self-contained compact prompt.
+- Record a small synthetic release comparison separately from earlier research probes. General quality improvement and real standards-based report performance remain unestablished.
+
 ## 1.1.1 — 2026-09-20
 
 - Put installation and chat use first; explain that Python is a maintainer tool.

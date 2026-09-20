@@ -21,6 +21,8 @@ Discuss specific passages and repairs. If scores are requested, explain criteria
 
 Read from the audience's position: what is clear after the opening, which connection needs guessing, what needs verification, and does the headline overpromise? Require a next action only when appropriate to the genre. When shortening, compare required meanings, especially caveats, conditions, deadlines, reasons, and important counterarguments.
 
+For interdependent work, check that changed premises reached their dependent summaries, tables, and conclusions using the [meaning map](meaning-map.md). Check the original text and sources too: a tidy map can omit a relationship or record an invented one.
+
 **Done:** material defects are resolved and the result meets the request. For requested retained feedback, record the request, weak passage, reason, accepted repair, and scope; do not silently update the skill or make each comment a prohibition.
 
 For skill development only, use the [evaluation guide](https://github.com/RIV1992/chtets/blob/main/docs/evaluation.md). A small trial or model self-review does not establish general improvement or replace the author's judgment.

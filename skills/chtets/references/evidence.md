@@ -16,6 +16,10 @@ For substantial factual work, use a working map when useful: exact claim → sup
 
 For papers, distinguish hypothesis, design, observation, and interpretation. For datasets, distinguish schema, record, reference answer, and scoring procedure. For archives, inspect content rather than relying on a date or matching name.
 
+For standards and specifications, identify the exact designation, edition or amendment, clause, definitions, applicability conditions, and exceptions. Check which edition the project uses; a newer date alone does not establish applicability. Preserve distinctions such as required, recommended, and permitted. Read referenced clauses that materially constrain the conclusion. A contents page, snippet, or inaccessible full text cannot substantiate an exact requirement.
+
+Separate what a requirement says from project evidence that it is satisfied. Do not infer compliance from a planned test, an unsigned record, or a citation alone. State missing applicability information or unresolved conflicts. For dependencies across report sections, use the [meaning map](meaning-map.md).
+
 ## Check fragile details
 
 - **Numbers:** recompute important totals and percentages; check denominators, rounding, and agreement across tables. A cross-system average does not describe one system or every task.

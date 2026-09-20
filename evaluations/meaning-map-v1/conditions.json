@@ -1,0 +1,29 @@
+{
+  "A": {
+    "source": "9eeb3bc6d1b7a2efd9f1b32ea1d95c93b4fbc2f8",
+    "sha256": {
+      "skills/chtets/SKILL.md": "00c9a795e9a280e382e0b8418730244c03e8346aa4d0d5f8318c61b24967e936",
+      "skills/chtets/agents/openai.yaml": "44a521f317b2dbe9a4fd1baa47fbf3294dba22cdd39dfe22de88fae68ee4b531",
+      "skills/chtets/references/author-voice.md": "1e2a06d1a41613e952fbfa8610579dc4718a0a527db9be47dd7a76960c18c13f",
+      "skills/chtets/references/composition.md": "a666e5e6d19772094eee3875d2aa315589ab1ad74ad454c85b9bc83acc432110",
+      "skills/chtets/references/evidence.md": "b17185cf3650ef6cda0c5f1f52ded4c2cc422a86d0987ad5d8ea11daf8ff8f20",
+      "skills/chtets/references/foundations.md": "536503154d290bd16bd431cccd433eaaba435f29830ec735eb635bdcfc1b331f",
+      "skills/chtets/references/genres.md": "9ea809c63d3ea04e90a487c60f0873a6b65e5be6486c951865816629044f8deb",
+      "skills/chtets/references/review.md": "822e2b5b34a22ddb36ba20f2a0a88456720d76f9f1949a28ae73d7ca0d1a353c"
+    }
+  },
+  "B": {
+    "source": "v1.2.0 candidate; exact runtime hashes below",
+    "sha256": {
+      "skills/chtets/SKILL.md": "556155302c3caf246649a49ef2c16c48efd230fa1269badb40e2cd9b36797cba",
+      "skills/chtets/agents/openai.yaml": "44a521f317b2dbe9a4fd1baa47fbf3294dba22cdd39dfe22de88fae68ee4b531",
+      "skills/chtets/references/author-voice.md": "1e2a06d1a41613e952fbfa8610579dc4718a0a527db9be47dd7a76960c18c13f",
+      "skills/chtets/references/composition.md": "950ba23fa9c14a231137d9514b220d9a8cd13e2d54aa94901927351b8a3c8c62",
+      "skills/chtets/references/evidence.md": "07f826fd32c20db36463bae4fd12b3b7b7f21c283d67a45ac9585e284b0a21fa",
+      "skills/chtets/references/foundations.md": "536503154d290bd16bd431cccd433eaaba435f29830ec735eb635bdcfc1b331f",
+      "skills/chtets/references/genres.md": "9ea809c63d3ea04e90a487c60f0873a6b65e5be6486c951865816629044f8deb",
+      "skills/chtets/references/meaning-map.md": "f0e330428a3e7b01bfd383948c70152fa48ff579a27871a7556e4a756bc86ca6",
+      "skills/chtets/references/review.md": "9213d32816751419a3e9d993e21a75068aab359db0dcb58ebc9691e3a0ff3543"
+    }
+  }
+}

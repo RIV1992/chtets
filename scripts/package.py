@@ -15,10 +15,10 @@ from validate import (
     DEFINITION_RE, LINK_RE, ROOT, SKILL_REL, local_target, parse_frontmatter, source_files, validate,
 )
 
-DEFAULT_VERSION = "1.1.1"
+DEFAULT_VERSION = "1.2.0"
 ZIP_TIMESTAMP = (2020, 1, 1, 0, 0, 0)
 RUNTIME_REFERENCES = (
-    "author-voice.md", "composition.md", "evidence.md", "genres.md", "review.md",
+    "author-voice.md", "composition.md", "evidence.md", "genres.md", "meaning-map.md", "review.md",
 )
 ROUTING_HEADING = "## Read selectively"
 COMPACT_FALLBACK = (

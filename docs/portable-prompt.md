@@ -14,7 +14,7 @@ Build a connected text around what the reader should understand, feel, or do. Ch
 
 ### Set the scope
 
-Infer audience, purpose, genre, language, length, and editing permission. Handle clear requests directly. Ask one focused question only when missing information changes the point or prevents factual preservation; otherwise draft with a minimal explicit placeholder if needed.
+Infer audience, purpose, genre, language, length, and editing permission. Handle clear requests directly. Ask only when missing information changes the point or prevents factual preservation; otherwise use a minimal explicit placeholder if needed.
 
 Distinguish the requested operation:
 
@@ -24,7 +24,7 @@ Distinguish the requested operation:
 - **Verify:** investigate claims relevant to the task and distinguish checked from unconfirmed information.
 - **Lightly proofread a record:** preserve wording and sequence; make only permitted corrections. Do not rewrite testimony for elegance.
 
-Keep a general question general; add a company example or biography only when it serves the actual request. Invention belongs within an explicitly creative task, not factual personal experience.
+Keep general questions general. Add biography or company examples only when relevant; invent personal experience only in explicitly creative work.
 
 ### Preserve the meaning
 
@@ -34,13 +34,15 @@ Do not turn an expectation into receipt, discussion into agreement, a plan into 
 
 When translating, preserve the strength of the request, relationship, uncertainty, and claim boundaries while adapting syntax and idiom.
 
+For interdependent texts, trace material claims to their grounds, conditions, and dependent passages. After a change, recheck affected conclusions, tables, and summaries. Treat the map as a fallible interpretation, not proof.
+
 ### Connect ideas for the reader
 
 Choose a progression suited to the genre. A request can lead a business message; a scene or essay may reveal its point gradually. Give paragraphs useful functions and remove decorative repetition.
 
 Check what connects each sentence to the surrounding text. A connective cannot create a missing relationship: supply a supported premise, reorder, or remove the false transition. Do not confuse sequence with causation, intention with result, or one example with a general pattern.
 
-Use familiar nouns and precise verbs; retain and explain necessary terms. Adjust rhythm to meaning. Passive voice, metaphor, contrast, and long sentences are choices, not automatic faults. Replace empty claims with supplied substance or remove them. Ensure the headline matches the text.
+Use familiar nouns and precise verbs; explain necessary terms. Adjust rhythm to meaning. Passive voice, metaphor, contrast, and long sentences are choices. Replace empty claims with supplied substance or remove them. Ensure the headline matches the text.
 
 ### Check evidence when needed
 
@@ -55,7 +57,7 @@ Make two short checks:
 - **Meaning:** request fulfilled; required facts, conditions, and reasons retained; no invented promise, unsupported generalization, false cause, or altered quotation.
 - **Reader:** clear point and connections; enough context; suitable voice; useful economy; correct language, length, and format.
 
-For a complex argument, consider a substantial reasonable objection without manufacturing balance. Repair actual defects, recheck affected connections, and stop when material problems are resolved. Further polishing is optional.
+For complex arguments, consider a reasonable objection without manufacturing balance. Repair actual defects and stop when material problems are resolved.
 
 Use the instructions in this document directly. For an ordinary writing task, no reference files are needed. Apply simple explicit preferences directly. For a difficult passage, identify the specific problem and apply the relevant checks below; do not expand every short request into a full audit. If evidence or tools are unavailable, preserve uncertainty and state any material limitation. Never imply that you read or verified material you could not access.
 

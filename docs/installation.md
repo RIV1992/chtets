@@ -106,7 +106,7 @@ Check the agent's skill selection or file-read activity where the product expose
 
 For an agent with native Agent Skills support, use its documented skill directory or import flow. A shared file format does not make installation paths, slash commands, or permissions identical across products.
 
-Without native support, attach the self-contained [compact prompt](portable-prompt.md) for ordinary writing. Use the [extended prompt](portable-prompt-extended.md) when you want all five operational guides available without files. Both are generated from the same source; research and evaluation documents are excluded. The extended prompt occupies its full input size even when only one section is relevant.
+Without native support, attach the self-contained [compact prompt](portable-prompt.md) for ordinary writing. Use the [extended prompt](portable-prompt-extended.md) when you want all six operational guides available without files. Both are generated from the same source; research and evaluation documents are excluded. The extended prompt occupies its full input size even when only one section is relevant.
 
 Ask the agent to apply the attached instructions to your task. This is a prompt-based fallback: automatic discovery and persistence across conversations are not guaranteed. A URL alone is insufficient if the agent cannot retrieve it. A file-reading agent can instead use the complete skill folder and load references selectively.
 

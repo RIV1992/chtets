@@ -52,6 +52,7 @@ The edit explains why the delivery problem matters to the launch. It keeps a pos
 | --- | --- |
 | Write from notes | Reader, purpose, central thought, and necessary context |
 | Repair a disjointed draft | The relationship between neighboring sentences and paragraphs |
+| Revise an interdependent report | Changed premises, exact source grounds, and affected tables, sections, and conclusions |
 | Shorten a text | Repetition and detours, while retaining conditions and qualifications |
 | Make a claim persuasive | Its evidence, concrete meaning, and limits |
 | Write in someone's voice | Confirmed preferences and actual experience supplied by that person |
@@ -62,6 +63,8 @@ The edit explains why the delivery problem matters to the launch. It keeps a pos
 Chtets separates two editorial passes: **meaning and evidence**, then **reader and language**. A fluent sentence still needs a sound claim; an accurate collection of facts still needs a clear line of thought.
 
 Try the [example requests](examples/tasks.md), or read the [before-and-after practice pairs](examples/practice-pairs.md) to see how an edit preserves its source facts.
+
+For interdependent reports, an optional [meaning map](docs/meaning-map.md) connects claims, source passages, conditions, and affected sections. With standards, it distinguishes the exact requirement and applicable edition from evidence that the project satisfies it. The [worked example](examples/meaning-map.md) shows how one corrected number changes a table, summary, and conclusion. Ordinary writing still uses the core directly.
 
 ## Bring your own voice
 
@@ -75,16 +78,16 @@ The package follows the `SKILL.md` folder structure used by Agent Skills clients
 
 These are documentation-checked installation routes, not a claim that every client/version has passed an end-to-end test. Invocation, file access, and web research depend on the host agent.
 
-For chat apps without native skills, attach or paste the [compact prompt](docs/portable-prompt.md) with your task. It contains the core workflow in one self-contained file. The [extended prompt](docs/portable-prompt-extended.md) also includes the five operational guides. Pasting it supplies all of that text, even if the agent only uses one section. Neither prompt installs an automatically discovered skill.
+For chat apps without native skills, attach or paste the [compact prompt](docs/portable-prompt.md) with your task. It contains the core workflow in one self-contained file. The [extended prompt](docs/portable-prompt-extended.md) also includes the six operational guides. Pasting it supplies all of that text, even if the agent only uses one section. Neither prompt installs an automatically discovered skill.
 
-The native core is **792 words**; the compact prompt is **838 words**, down from the previous 6,087-word all-in-one prompt. These are whitespace word counts, not model tokens. The instructions ask agents to read references selectively; actual loading depends on the host. See the [size report](docs/context-size.json) for reproducible counts.
+The native core is **798 words**; the compact prompt is **842 words**, down from the previous 6,087-word all-in-one prompt. These are whitespace word counts, not model tokens. The instructions ask agents to read references selectively; actual loading depends on the host. See the [size report](docs/context-size.json) for reproducible counts.
 
 ## What's inside
 
 | Path | Purpose |
 | --- | --- |
 | [`skills/chtets/SKILL.md`](skills/chtets/SKILL.md) | Core workflow and reference routing |
-| [`skills/chtets/references/`](skills/chtets/references/) | Composition, genres, evidence, author voice, review, and foundations |
+| [`skills/chtets/references/`](skills/chtets/references/) | Composition, genres, evidence, meaning map, author voice, review, and foundations |
 | [`docs/installation.md`](docs/installation.md) | Installer, manual copy, supported paths, and troubleshooting |
 | [`docs/customization.md`](docs/customization.md) | Optional personal style and project conventions |
 | [`docs/research.md`](docs/research.md) | Research findings translated into practical writing decisions |

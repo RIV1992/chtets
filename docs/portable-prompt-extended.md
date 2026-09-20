@@ -14,7 +14,7 @@ Build a connected text around what the reader should understand, feel, or do. Ch
 
 ### Set the scope
 
-Infer audience, purpose, genre, language, length, and editing permission. Handle clear requests directly. Ask one focused question only when missing information changes the point or prevents factual preservation; otherwise draft with a minimal explicit placeholder if needed.
+Infer audience, purpose, genre, language, length, and editing permission. Handle clear requests directly. Ask only when missing information changes the point or prevents factual preservation; otherwise use a minimal explicit placeholder if needed.
 
 Distinguish the requested operation:
 
@@ -24,7 +24,7 @@ Distinguish the requested operation:
 - **Verify:** investigate claims relevant to the task and distinguish checked from unconfirmed information.
 - **Lightly proofread a record:** preserve wording and sequence; make only permitted corrections. Do not rewrite testimony for elegance.
 
-Keep a general question general; add a company example or biography only when it serves the actual request. Invention belongs within an explicitly creative task, not factual personal experience.
+Keep general questions general. Add biography or company examples only when relevant; invent personal experience only in explicitly creative work.
 
 ### Preserve the meaning
 
@@ -34,13 +34,15 @@ Do not turn an expectation into receipt, discussion into agreement, a plan into 
 
 When translating, preserve the strength of the request, relationship, uncertainty, and claim boundaries while adapting syntax and idiom.
 
+For interdependent texts, trace material claims to their grounds, conditions, and dependent passages. After a change, recheck affected conclusions, tables, and summaries. Treat the map as a fallible interpretation, not proof.
+
 ### Connect ideas for the reader
 
 Choose a progression suited to the genre. A request can lead a business message; a scene or essay may reveal its point gradually. Give paragraphs useful functions and remove decorative repetition.
 
 Check what connects each sentence to the surrounding text. A connective cannot create a missing relationship: supply a supported premise, reorder, or remove the false transition. Do not confuse sequence with causation, intention with result, or one example with a general pattern.
 
-Use familiar nouns and precise verbs; retain and explain necessary terms. Adjust rhythm to meaning. Passive voice, metaphor, contrast, and long sentences are choices, not automatic faults. Replace empty claims with supplied substance or remove them. Ensure the headline matches the text.
+Use familiar nouns and precise verbs; explain necessary terms. Adjust rhythm to meaning. Passive voice, metaphor, contrast, and long sentences are choices. Replace empty claims with supplied substance or remove them. Ensure the headline matches the text.
 
 ### Check evidence when needed
 
@@ -55,7 +57,7 @@ Make two short checks:
 - **Meaning:** request fulfilled; required facts, conditions, and reasons retained; no invented promise, unsupported generalization, false cause, or altered quotation.
 - **Reader:** clear point and connections; enough context; suitable voice; useful economy; correct language, length, and format.
 
-For a complex argument, consider a substantial reasonable objection without manufacturing balance. Repair actual defects, recheck affected connections, and stop when material problems are resolved. Further polishing is optional.
+For complex arguments, consider a reasonable objection without manufacturing balance. Repair actual defects and stop when material problems are resolved.
 
 Use only the relevant included reference section for a specific difficulty. The core instructions are sufficient for ordinary writing; apply simple explicit preferences directly. All operational references are already included in this document; selecting a section does not reduce its pasted input size.
 
@@ -96,6 +98,8 @@ A profile can be supplied directly in the request; no account, memory feature, o
 ## Reference: references/composition.md
 
 Use for an unclear point, gaps between ideas, or heavy prose. For a local change, repair the passage and its connections. These are editorial guidelines, not a QuestBench-validated writing method.
+
+When a change reaches distant sections, use the meaning map (see "Reference: references/meaning-map.md") to find affected passages; then restore readable progression without imposing the map's structure on the prose.
 
 ### Find the progression
 
@@ -148,6 +152,10 @@ For substantial factual work, use a working map when useful: exact claim → sup
 3. Separate direct support, interpretation, and matters the source does not address. Preserve those boundaries in the sentence.
 
 For papers, distinguish hypothesis, design, observation, and interpretation. For datasets, distinguish schema, record, reference answer, and scoring procedure. For archives, inspect content rather than relying on a date or matching name.
+
+For standards and specifications, identify the exact designation, edition or amendment, clause, definitions, applicability conditions, and exceptions. Check which edition the project uses; a newer date alone does not establish applicability. Preserve distinctions such as required, recommended, and permitted. Read referenced clauses that materially constrain the conclusion. A contents page, snippet, or inaccessible full text cannot substantiate an exact requirement.
+
+Separate what a requirement says from project evidence that it is satisfied. Do not infer compliance from a planned test, an unsigned record, or a citation alone. State missing applicability information or unresolved conflicts. For dependencies across report sections, use the meaning map (see "Reference: references/meaning-map.md").
 
 ### Check fragile details
 
@@ -210,6 +218,36 @@ Serve scene, voice, tension, image, or experiment without imposing a business th
 
 ---
 
+## Reference: references/meaning-map.md
+
+Use when a changed premise, requirement, definition, quantity, or status can affect distant passages, or when several sources jointly support a conclusion. A long text alone does not require a map. Handle routine prose and isolated corrections directly; preserve deliberate literary ambiguity and the user's editing limits.
+
+### Record only useful relationships
+
+Keep a small working table or notes, outside finished prose unless an audit trail is requested. Start with the claims needed for the current decision; expand when their dependencies require it. No graph software or fixed schema is required.
+
+For each material claim, retain:
+
+- A local label and location: section, paragraph, table cell, or heading.
+- The actor, assertion, and boundaries: time, population, units, negation, status, certainty, and conditions.
+- Its basis: exact source passage and edition, supplied fact, calculation, or inference. Distinguish checked support, an attributed claim, unresolved support, and conflicting evidence.
+- Relevant connections: supports, requires, qualifies, refers to, derives from, or contradicts. Mark inferred or unresolved connections; never manufacture a link or numerical confidence.
+
+A stated causal relationship is not automatically an evidenced cause. Missing support does not prove falsehood; no recorded connection does not prove independence. Return to source passages when the map and text disagree.
+
+### Apply a change through its dependents
+
+1. Locate the changed claim and compare its protected meaning with the new material.
+2. Follow the conclusions, conditions, references, calculations, and repeated statements that rely on it. Include headings, summaries, tables, captions, and appendices within the requested scope; do not stop at neighboring sentences or a fixed number of steps.
+3. Repair affected assertions and recompute derived numbers. Keep unrelated passages intact. For locked quotations or a punctuation-only task, flag a consequential conflict separately rather than silently expanding editing permission.
+4. Check the repaired connections, then perform the core's meaning and reader checks. Stop when material defects are resolved. Show unresolved premises instead of completing the chain by guessing.
+
+Example: 18 reports among 24 pilot participants become 18 among 36 after a denominator correction. Change 75% to 50% and “a majority” to “half” wherever dependent; retain the self-reported outcome and pilot scope. The calculation does not establish causation.
+
+For a report built from standards, link requirement and exact clause → applicability conditions → project evidence → conclusion → affected sections. Use evidence (see "Reference: references/evidence.md") for editions, exceptions, and source conflicts. Keep a source requirement separate from evidence that this project satisfies it. Refresh affected entries after new evidence or edits; reuse project notes only within the authorized task, without silently updating persistent profiles.
+
+---
+
 ## Reference: references/review.md
 
 Use for complex work or requested audits; the core's two passes suffice for short edits. This is an editorial rubric, not a scientific quality scale.
@@ -232,6 +270,8 @@ Block completion for a missing request or required condition; unsupported fact, 
 Discuss specific passages and repairs. If scores are requested, explain criteria and subjectivity; do not present them as objective writing ability.
 
 Read from the audience's position: what is clear after the opening, which connection needs guessing, what needs verification, and does the headline overpromise? Require a next action only when appropriate to the genre. When shortening, compare required meanings, especially caveats, conditions, deadlines, reasons, and important counterarguments.
+
+For interdependent work, check that changed premises reached their dependent summaries, tables, and conclusions using the meaning map (see "Reference: references/meaning-map.md"). Check the original text and sources too: a tidy map can omit a relationship or record an invented one.
 
 **Done:** material defects are resolved and the result meets the request. For requested retained feedback, record the request, weak passage, reason, accepted repair, and scope; do not silently update the skill or make each comment a prohibition.
 
