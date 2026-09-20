@@ -14,7 +14,7 @@ import zipfile
 REPOSITORY = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPOSITORY / "scripts"))
 
-from package import RUNTIME_REFERENCES, portable_prompt  # noqa: E402
+from package import DEFAULT_VERSION, RUNTIME_REFERENCES, portable_prompt  # noqa: E402
 from validate import local_target, LINK_RE, validate  # noqa: E402
 
 
@@ -105,8 +105,8 @@ class PackagingTests(unittest.TestCase):
         self.write("research/scratch.csv", "Excluded scratch table")
         self.write("scratch/private.json", '{"private":true}\n')
         self.build()
-        install = self.root / "dist/chtets-v1.1.0.zip"
-        source = self.root / "dist/chtets-source-v1.1.0.zip"
+        install = self.root / f"dist/chtets-v{DEFAULT_VERSION}.zip"
+        source = self.root / f"dist/chtets-source-v{DEFAULT_VERSION}.zip"
         with zipfile.ZipFile(install) as archive:
             names = set(archive.namelist())
             self.assertIn("chtets/SKILL.md", names)

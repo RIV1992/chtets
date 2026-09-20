@@ -650,7 +650,7 @@ Checked 2026-09-19. The proposed rule is a design hypothesis, not a measured Cht
 
 **Focus:** targeted feedback and revision loops. **Evidence:** Inference-time intervention; seven heterogeneous tasks with human, model and task-specific evaluation. **Route:** `direct_writing_research`. **Reading priority:** core.
 
-**Finding.** The feedback-and-revision loop improved reported outcomes on several generation tasks. In three ablations, concrete feedback outperformed generic or absent feedback. The paper also records fluctuating quality across revisions, so a later draft need not be the best one.
+**Finding.** The feedback-and-revision loop improved reported outcomes on several generation tasks. In ablations across three tasks, specific, actionable feedback outperformed generic or absent feedback. The paper also records fluctuating quality across revisions, so a later draft need not be the best one.
 
 **Limit.** Heterogeneous metrics and proprietary 2023 models; some model judging. Later work challenges initial-prompt fairness. This is neither universal factual verification nor evidence of Chtets effectiveness.
 
@@ -676,7 +676,7 @@ Inspected locations:
 
 **Additional primary resources:** [resource 1](https://arxiv.org/html/2303.17651v2); [resource 2](https://selfrefine.info/); [resource 3](https://github.com/madaan/self-refine); [resource 4](https://github.com/madaan/self-refine/blob/main/LICENSE).
 
-Checked 2026-09-19. The proposed rule is a design hypothesis, not a measured Chtets effect.
+Checked 2026-09-20. The proposed rule is a design hypothesis, not a measured Chtets effect.
 
 ## REV04
 

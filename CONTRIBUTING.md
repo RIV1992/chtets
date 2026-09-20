@@ -19,16 +19,17 @@ If reporting an improvement, include the prompts, outputs, model and tool condit
 
 ## Work on the source files
 
-Edit `skills/chtets/SKILL.md` and its references. `docs/portable-prompt.md` is generated: regenerate it rather than changing it directly.
+Edit `skills/chtets/SKILL.md` and its references. Regenerate `docs/portable-prompt.md`, `docs/portable-prompt-extended.md`, and `docs/context-size.json` instead of editing them directly.
 
-Run:
+Repository checks and packaging use Python 3.10 or later. Run:
 
 ```bash
 python3 scripts/validate.py
+python3 -m unittest discover -s tests
 python3 scripts/package.py
 ```
 
-Review the generated prompt and archives. Add a short entry to `CHANGELOG.md` when the change affects users. Before a release, check the installation steps against the relevant client's official documentation.
+Review the generated prompts, size report, and archives. Include the regenerated documentation with the source change. Add a short entry to `CHANGELOG.md` when the change affects users. Before a release, check the installation steps against the relevant client's official documentation.
 
 ## Share only public material
 

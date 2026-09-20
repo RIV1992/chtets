@@ -5,7 +5,7 @@ Date: 2026-09-19. This is a small model-assisted development comparison, not a c
 ## Conditions and separation
 
 - **A:** public skill at commit `78f01bfaaa125fb9cff56640fd20dea6983b93f0`.
-- **B:** compact core and references in version 1.1.0, with the existing editorial rules preserved and routing made selective.
+- **B:** compact core and references in version 1.1.0 at commit `66b9ee7d79483d47e8c97c586dee8013ca3e8f13`, with the existing editorial rules preserved and routing made selective. Use this pinned revision when reconstructing the run; the current skill may change.
 - **C1, C2, C3:** B plus one explicit instruction: claim boundaries, dependent spans after editing, or located repair with comparison/rollback. The exact additions are in [mechanism-trials.json](work/mechanism-trials.json). Insert each before `## Read selectively` in B to reconstruct the tested candidate. No candidate was adopted.
 
 A separate fresh agent authored 36 synthetic inputs and separate rubrics without reading the skill, research corpus, earlier examples, or generated responses. There are 12 tasks per language (English, French, Russian), two per language/genre combination. Twelve requests require no change or a local typo correction. The six families are correspondence, expert comment/voice, explanation/shortening, source-based analysis, interface copy, and fiction.
@@ -60,8 +60,18 @@ Native client discovery, long-context interference, repeated-task learning, exte
 
 ## Artifacts and reuse
 
-[Inputs](stimuli/inputs.jsonl), [rubrics](stimuli/rubrics.jsonl), outputs, anonymous pairs, judgments, keys, candidate additions, and decoded summaries are included. [Creation notes](stimuli/creation-notes.md) document allocation; [rule ownership](rule-ownership.md) records the compression audit. These are now public development examples and must not be reused as unseen test evidence.
+[Inputs](stimuli/inputs.jsonl), [rubrics](stimuli/rubrics.jsonl), [outputs and read manifests](outputs/), [anonymous judgments](blind/), [A/B key](work/blind-key.json), [probe key](work/probe-key.json), and [candidate additions](work/mechanism-trials.json) are retained. [Creation notes](stimuli/creation-notes.md) document allocation; [rule ownership](rule-ownership.md) records the compression audit. These are now public development examples and must not be reused as unseen test evidence.
 
 Writer instruction template: complete each request independently; use only the assigned skill and input file; load references selectively; do not browse or use extra agents; return one final answer in the requested language and scope; record files read separately. Manual smoke substitutes the attached compact prompt for the skill folder. Judges see only the request, supplied material, prior rubric and anonymous response pair, check exact constraints before preference, cite defective spans, and allow ties. No private profiles or third-party dataset rows are included.
 
-Run `python3 evaluations/2026-09-19/summarize.py` to recompute the preference and critical-failure counts from the saved anonymous judgments and keys. This checks aggregation, not the truth of the judgments.
+Run `python3 evaluations/2026-09-19/summarize.py` to recompute the preference and critical-failure counts from the saved anonymous judgments and keys. The script rejects missing or duplicate records and mismatched case mappings. This checks evidence structure and aggregation, not the truth of the judgments.
+
+To reconstruct the four original anonymous bundles, including their original row order, run:
+
+```bash
+python3 evaluations/2026-09-19/summarize.py --export-pairs dist/chtets-pairs
+```
+
+The export joins the retained inputs, rubrics, outputs and keys. For probes, seed 88267 consumed 27 X/Y shuffles before shuffling the rows. Reconstruction was compared byte for byte with the original bundles before removal; [regression checks](../../tests/test_evaluation_artifacts.py) retain their SHA-256 hashes. Manual smoke inputs are the three `explanation_shortening-01` records from [writing inputs](stimuli/inputs.jsonl), followed by all twelve [routing inputs](stimuli/routing-inputs.jsonl); [smoke outputs](outputs/manual-smoke.jsonl) retain the run order and case IDs.
+
+Cleanup on 2026-09-20 removed only duplicate anonymous bundles, the duplicate smoke input subset, and four decoded/summary intermediates. Original inputs, outputs, judgments, keys, read manifests, candidate instructions, and the limitations above remain. The cleanup ran structural and reconstruction checks, with no new writing trials.

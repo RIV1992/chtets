@@ -43,7 +43,7 @@ These labels describe the route of relevance, not a scientific quality ranking. 
 
 Thirty-four sources do not mean thirty-four independent confirmations. Some reuse datasets or annotations: FActScore and SAFE share an evaluation lineage; G-Eval uses SummEval; several resources depend on Wikipedia or the same news corpora. Keep related sources for distinct contributions without adding their results as independent replications.
 
-English dominates. Chinese appears in research and writing benchmarks; XFORMAL provides French sentence-register evidence. We did not verify sufficiently direct Russian author-voice evidence in this selection. There are no Chtets comparative results for any language in this package.
+English dominates. Chinese appears in research and writing benchmarks; XFORMAL provides French sentence-register evidence. We did not verify sufficiently direct Russian author-voice evidence in this selection. This literature snapshot contains no Chtets comparison. Subsequent development results are recorded in the [evaluation guide](../../docs/evaluation.md).
 
 Publication metadata and release metadata can differ. Preserve the CoEdIT, WritingBench, LitBench and DeepResearch Bench II version notes. Repository availability was observed on the snapshot date, not guaranteed indefinitely. No executable environment was reproduced, and not every linked file or dataset row was inspected.
 
