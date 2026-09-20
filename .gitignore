@@ -2,6 +2,8 @@ dist/
 __pycache__/
 *.py[cod]
 .venv/
+.belief_map.sexp
+.belief_map_cache.json
 .DS_Store
 .env
 .env.*

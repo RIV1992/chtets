@@ -1,116 +1,86 @@
 # Chtets — Clear writing, faithful meaning
 
-Chtets is a portable writing and editing skill for AI agents. Its workflow helps the agent clarify the purpose, connect ideas, cut unnecessary words, and preserve the author's meaning, voice, and commitments.
+Chtets is a portable writing and editing skill for AI agents. It guides the agent to preserve the author's meaning and voice, make the reasoning clear, and trace important claims to their sources. When a fact or requirement changes, it helps identify which passages, tables, and conclusions need another look.
 
-[Install for an agent](docs/installation.md) · [Use in a chat](docs/portable-prompt.md) · [Examples](examples/tasks.md) · [MIT license](LICENSE)
+Use it for everyday correspondence, articles, technical reports, translation, and creative prose. The instructions are written in English and include guidance for English, French, and Russian.
 
-Use it for emails, articles, expert comments, explanations, interface copy, and creative prose. The instructions are in English; the workflow also includes guidance for writing in French and Russian.
+**Current version: [1.2.0](https://github.com/RIV1992/chtets/releases/tag/v1.2.0)** · [Install](docs/installation.md) · [Use in a chat](docs/portable-prompt.md) · [Examples](examples/tasks.md)
 
-## Quick start
+## Start with your text
 
-With Node.js and npm available, run:
+With Node.js and npm available, install through the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
 npx skills add RIV1992/chtets --skill chtets
 ```
 
-Choose your agent and installation scope when prompted. Then give the agent a task and the source material:
+Choose your agent and installation scope, then provide the task and source material:
 
 ```text
-Use Chtets to edit the draft below for a prospective customer.
-Keep the facts, conditions, and level of certainty. Make the argument flow
-from one sentence to the next. Return the finished text first.
+Use Chtets to edit the draft below for its intended reader.
+Preserve the facts, conditions, uncertainty, and author position.
+Make the reasoning easy to follow. Return the finished text first.
 
-[Your draft]
+[Draft and supporting material]
 ```
 
-The skill is Markdown. Installing and using it requires no Python, server, or executable code from this repository. The command above uses the separate [Skills CLI](https://github.com/vercel-labs/skills). You can also [copy the skill folder manually](docs/installation.md#option-2-copy-the-skill-folder) or download a [release archive](https://github.com/RIV1992/chtets/releases).
+You can also [copy the skill folder](docs/installation.md#option-2-copy-the-skill-folder) or download the [installable archive](https://github.com/RIV1992/chtets/releases/download/v1.2.0/chtets-v1.2.0.zip). Keep the whole folder so its references remain available.
 
-## A small edit can change a promise
+**Chtets is Markdown guidance. Using it requires no Python, server, or executable code from this repository.** Its host agent supplies the model and any tools needed for your task.
 
-**Source facts:** the team expects approval by Thursday; approval is still pending; launch depends on approval.
+## What changes in the writing process
 
-| Draft | Edited with those facts preserved |
+| Task | What Chtets asks the agent to do |
 | --- | --- |
-| “We will launch on Thursday.” | “We expect approval by Thursday and plan to launch once it comes through.” |
+| Draft from notes | Find the point, organize the material, and supply the context a reader needs |
+| Edit or shorten | Improve flow and economy while preserving facts, conditions, and commitments |
+| Write from sources | Match material claims to supporting passages, editions, units, and limits |
+| Revise a complex report | Follow changed premises through dependent sections, tables, and summaries |
+| Adapt an author's voice | Use supplied samples and scoped preferences without inventing experience |
+| Translate | Preserve intent, register, uncertainty, and the strength of a request or promise |
+| Proofread a record | Respect the permitted corrections and preserve verbatim wording when required |
+| Write creatively | Support viewpoint, rhythm, and deliberate ambiguity |
 
-The correction preserves the dependency and the uncertainty.
+The final review separates **meaning and evidence** from **reader and language**. A fluent sentence can still change a promise; a list of correct facts can still leave a gap in the argument.
 
-## Make the connection clear
+## From a sentence to a whole report
 
-**Source facts:** test invitations are landing in spam; launch requires reliable delivery.
+These examples use synthetic facts.
 
-| Draft | Edited to make the reasoning explicit |
+| Source material | Faithful result |
 | --- | --- |
-| “Our test emails are landing in spam. We should delay the launch.” | “Our test emails are landing in spam, so invitees may miss them. We should delay the launch until delivery is reliable.” |
+| Approval is expected by Thursday; launch depends on it | “We expect approval by Thursday and plan to launch once it comes through.” |
+| A correction changes a pilot from 18 reports among 24 participants to 18 among 36 | Update 75% to 50%, “a majority” to “half,” and any dependent headline, table, or conclusion. Keep the self-report and pilot limitations. |
 
-The edit explains why the delivery problem matters to the launch. It keeps a possible consequence as a risk rather than reporting it as an event that has already happened. Both examples are illustrative edits based on the stated facts.
+For interdependent work, the optional [meaning map](docs/meaning-map.md) records claims, grounds, conditions, and affected passages. In a report built from standards, it keeps the exact requirement and its applicability separate from evidence that the project satisfies it. An edition change or exception can alter the conclusion; a planned test does not establish compliance.
 
-## What it helps with
+The map is a working interpretation that must be checked against the material. Routine messages use the core directly. See the [worked example](examples/meaning-map.md) and [editing practice pairs](examples/practice-pairs.md).
 
-| Your task | What the agent should check |
-| --- | --- |
-| Write from notes | Reader, purpose, central thought, and necessary context |
-| Repair a disjointed draft | The relationship between neighboring sentences and paragraphs |
-| Revise an interdependent report | Changed premises, exact source grounds, and affected tables, sections, and conclusions |
-| Shorten a text | Repetition and detours, while retaining conditions and qualifications |
-| Make a claim persuasive | Its evidence, concrete meaning, and limits |
-| Write in someone's voice | Confirmed preferences and actual experience supplied by that person |
-| Translate or adapt | Intent, register, terminology, and strength of commitments |
-| Proofread a transcript | The permitted level of change; preserve verbatim speech when requested |
-| Write a scene | Viewpoint, movement, rhythm, and meaningful detail |
+## Use it across agents and chats
 
-Chtets separates two editorial passes: **meaning and evidence**, then **reader and language**. A fluent sentence still needs a sound claim; an accurate collection of facts still needs a clear line of thought.
+The package follows the `SKILL.md` folder structure. The [installation guide](docs/installation.md) covers documented paths for Codex, Claude Code, Gemini CLI, OpenCode, and GitHub Copilot. Those routes have not all been tested end to end; discovery and tool access depend on the host.
 
-Try the [example requests](examples/tasks.md), or read the [before-and-after practice pairs](examples/practice-pairs.md) to see how an edit preserves its source facts.
+For a chat without native skill support, attach the self-contained [compact prompt](docs/portable-prompt.md). The [extended prompt](docs/portable-prompt-extended.md) includes all six operational guides. These are manual prompts; attaching one does not install a persistent skill.
 
-For interdependent reports, an optional [meaning map](docs/meaning-map.md) connects claims, source passages, conditions, and affected sections. With standards, it distinguishes the exact requirement and applicable edition from evidence that the project satisfies it. The [worked example](examples/meaning-map.md) shows how one corrected number changes a table, summary, and conclusion. Ordinary writing still uses the core directly.
+The core contains **798 whitespace words**, and the compact prompt **842**. Optional references are read for specific difficulties. The extended prompt contains **3,555 words**, all supplied when pasted. These are file word counts, not model tokens or measured per-task context. [Size report](docs/context-size.json).
 
-## Bring your own voice
-
-Give the agent your style guide, a few writing samples, and any preferences that matter to the task.
-
-Copy [the author-profile example](examples/author-profile.example.md), keep the completed profile private, and explicitly ask your agent to use it. Profiles are optional; there is no automatic profile loader. See [customization](docs/customization.md) for scoped preferences and safe updates.
-
-## Agent support and portability
-
-The package follows the `SKILL.md` folder structure used by Agent Skills clients. The [installation guide](docs/installation.md) covers Codex, Claude Code, Gemini CLI, OpenCode, and GitHub Copilot in VS Code using their documented discovery paths.
-
-These are documentation-checked installation routes, not a claim that every client/version has passed an end-to-end test. Invocation, file access, and web research depend on the host agent.
-
-For chat apps without native skills, attach or paste the [compact prompt](docs/portable-prompt.md) with your task. It contains the core workflow in one self-contained file. The [extended prompt](docs/portable-prompt-extended.md) also includes the six operational guides. Pasting it supplies all of that text, even if the agent only uses one section. Neither prompt installs an automatically discovered skill.
-
-The native core is **798 words**; the compact prompt is **842 words**, down from the previous 6,087-word all-in-one prompt. These are whitespace word counts, not model tokens. The instructions ask agents to read references selectively; actual loading depends on the host. See the [size report](docs/context-size.json) for reproducible counts.
-
-## What's inside
-
-| Path | Purpose |
-| --- | --- |
-| [`skills/chtets/SKILL.md`](skills/chtets/SKILL.md) | Core workflow and reference routing |
-| [`skills/chtets/references/`](skills/chtets/references/) | Composition, genres, evidence, meaning map, author voice, review, and foundations |
-| [`docs/installation.md`](docs/installation.md) | Installer, manual copy, supported paths, and troubleshooting |
-| [`docs/customization.md`](docs/customization.md) | Optional personal style and project conventions |
-| [`docs/research.md`](docs/research.md) | Research findings translated into practical writing decisions |
-| [`docs/evaluation.md`](docs/evaluation.md) | What has been checked and how to evaluate a change |
-| [`research/2026-09-19/`](research/2026-09-19/) | 34 annotated sources, limitations, search logs, and development scenarios |
-| [`docs/development.md`](docs/development.md) | Rule ownership, context budgets, and criteria for new instructions |
-| [`examples/tasks.md`](examples/tasks.md) | Ready-to-use requests with synthetic source material |
-| [`scripts/`](scripts/) | Dependency-free validation and reproducible packaging |
-
-Keep the entire `skills/chtets` folder when installing: the main file links to its references. Ordinary use requires no server, API key, network call, or executable script from this repository. An agent may still use its own tools when your task calls for research.
+To personalize it, provide a style guide or writing samples. Keep completed profiles private and apply preferences within their scope. [Author-profile example](examples/author-profile.example.md) · [Customization](docs/customization.md).
 
 ## Evidence and limits
 
-The [research notes](docs/research.md) explain how QuestBench informed the evidence checks and how research on coherence, factual fidelity, revision, voice, and evaluation informs further development. Findings, proposed transfers, and tests are recorded separately. The research corpus stays outside the installed writing workflow. The [evaluation notes](docs/evaluation.md) document what has been tested and its limits; they do not establish a general improvement in writing quality.
+The [evaluation record](docs/evaluation.md) preserves tasks, outputs, judgments, and limitations. The v1.2.0 check compared eight synthetic requests with v1.1.1: the model reviewer reported no critical failures in either version, seven ties, and one slight preference for the new version. This does not establish a general improvement or performance on full-length reports with real standards.
 
-Chtets can guide an agent's decisions. It cannot guarantee factual correctness, access unavailable sources, or reproduce an author's voice without adequate material.
+Chtets guides the agent's work. Accuracy still depends on source access, interpretation, and review. It cannot supply missing evidence or guarantee an author's voice. The [research guide](docs/research.md) explains which findings inform the instructions; research and evaluation archives remain outside the installed skill.
 
-## Contribute
+## Repository guide
 
-A useful contribution starts with a writing task where the current guidance fails. Include synthetic or shareable source material, the observed problem, and the smallest rule change that addresses it. [Contribution guide](CONTRIBUTING.md).
+| Location | Purpose |
+| --- | --- |
+| [skills/chtets](skills/chtets/) | Installable core, operational references, and agent metadata |
+| [docs](docs/) and [examples](examples/) | Installation, manual prompts, explanations, and sample requests |
+| [research](research/2026-09-19/) and [evaluations](evaluations/) | Research provenance and preserved evaluation evidence |
+| [scripts](scripts/) and [tests](tests/) | Python tools for maintainers: validation, packaging, and regression checks |
 
-Maintainers use Python 3.10+ for validation, packaging tests, and generated exports. These tools prepare the files an agent reads. See [maintainer tools](docs/development.md#maintainer-tools) for the commands and archive contents.
+To contribute, bring a concrete writing failure and the smallest useful correction. [Contribution guide](CONTRIBUTING.md) · [Development and releases](docs/development.md) · [Changelog](CHANGELOG.md).
 
-## License
-
-[MIT](LICENSE). Copyright © 2026 RIV1992. External papers, datasets, and client documentation remain subject to their respective terms.
+[MIT license](LICENSE). Copyright © 2026 RIV1992. External sources retain their own terms.
