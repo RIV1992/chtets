@@ -2,6 +2,16 @@
 
 Separate four questions: does the package install, does the agent follow it, does the result preserve meaning, and does a reader prefer the writing?
 
+## Version 1.2.1: maintenance checks
+
+Three fresh agents each handled one new synthetic request using the public candidate: a short conditional message, a completeness audit against a fictional contract and amendment, and a denominator correction across report sections. Requests and acceptance criteria were recorded before execution; writers saw neither criteria nor other outputs. The parent model reviewed the results against the original requests. The [record](../evaluations/maintenance-v1.2.1/results.json) preserves requests, criteria, outputs, runtime hashes, reported reads, and review notes.
+
+The short message retained the conditions in 27 words and reported reading only the core. The local report change propagated 9/20 = 45% through the affected text and reused its table, reporting core and meaning-map reads. The completeness audit found all five requirement categories, retained the amendment and unavailable-appendix limit, and used one table; it reported core, meaning-map, evidence, and review reads. It also identified that the supplied full draft merely referred to the method description and results table rather than containing them.
+
+These are single functional observations, with no baseline or independent human review. They do not establish quality improvements, general reference-loading savings, real standards expertise, or full-report performance. Token use, latency, and hidden host context were not measured. Keep the real report field check separate.
+
+All 17 repository tests passed. Two previously unnoticed faults were recreated in temporary source copies: an incorrect README version now fails validation, and a missing meaning-map output fails evidence-integrity checks. Version checks include supplied release tags and archive labels; remote publication still needs verification. Historical evidence hashes do not constrain later skill instructions.
+
 ## Version 1.2.0: optional meaning map
 
 This release adds traceable dependencies across report sections, an explicit change-propagation procedure, and standards-reading guidance on editions, applicability, exceptions, and project evidence. The [release check](../evaluations/meaning-map-v1/README.md) preserves an eight-task comparison with v1.1.1. Read its findings and limitations before interpreting the addition as an improvement.

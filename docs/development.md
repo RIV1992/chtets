@@ -18,7 +18,7 @@ Claim boundaries, dependent spans, and purposeful revision remain useful researc
 | `meaning-map.md` | Track material dependencies and propagate changes across a text |
 | `author-voice.md` | Apply contextual preferences without inventing facts or biography |
 | `genres.md` | Resolve a consequential genre-specific choice |
-| `review.md` | Diagnose material defects in a requested critique or complex text |
+| `review.md` | Diagnose material defects in requested critique or resolve a specific editorial problem |
 | `foundations.md` | Brief provenance and optional links for maintainers |
 | `examples/`, `docs/`, `research/`, `evaluations/` | Teaching, research, implementation and recorded checks; not routine context |
 
@@ -58,8 +58,8 @@ The builder produces two versioned archives under `dist/` and records their SHA-
 
 | Archive | Contents |
 | --- | --- |
-| `chtets-v1.2.0.zip` | One `chtets/` folder containing the skill, references, agent metadata, and license |
-| `chtets-source-v1.2.0.zip` | The public source, documentation, research annotations, evaluation evidence, and maintainer tools |
+| `chtets-v1.2.1.zip` | One `chtets/` folder containing the skill, references, agent metadata, and license |
+| `chtets-source-v1.2.1.zip` | The public source, documentation, research annotations, evaluation evidence, and maintainer tools |
 
 Build outputs and analysis caches are not source files. Research and evaluation material stay outside the installable archive and both prompts. When reorganizing recorded evidence, preserve original inputs, outputs, judgments, mappings, and source versions; regenerate joins and totals instead of storing parallel copies. See the [evaluation artifact commands](../evaluations/2026-09-19/README.md#artifacts-and-reuse).
 
@@ -67,8 +67,14 @@ Build outputs and analysis caches are not source files. Research and evaluation 
 
 A version in the source and a published GitHub release are separate states. Use `DEFAULT_VERSION` in `scripts/package.py` as the package version and keep the current changelog entry, README version, and archive links aligned with it.
 
+Validation checks those source declarations; `--version` cannot relabel unchanged source. Run `python3 scripts/validate.py --release-tag v1.2.1` before publication. CI performs the same tag check on tag pushes. These local checks do not verify that GitHub has published the release or attached its assets; step 5 still requires checking the remote state.
+
+The meaning-map evidence tests preserve the v1.2.0 records as published, including case coverage and anonymous mappings. Their hashes describe historical artifacts, not the current skill: add a separate record for a new run instead of rewriting old results or updating hashes to hide a change.
+
 1. Finish the source change, regenerate the exports, and pass repository checks. Merge the reviewed change before choosing its release commit.
 2. Build from that exact commit. Verify that the installable ZIP contains only the skill and license, and that both archive names match the version.
 3. Create the matching `vX.Y.Z` tag and GitHub release at that commit. Describe behavior changes and the actual validation limits; retain older releases as history.
 4. Attach the installable archive, source archive, and generated `SHA256SUMS`, then mark the stable release as latest.
 5. Verify the published tag, latest-release display, and downloadable assets. A successful source merge or CI artifact upload alone does not complete publication.
+
+After merging a PR, remove its branch only when its current head has no commits outside the target branch and no open work depends on it. Keep releases, tags, and original research evidence.

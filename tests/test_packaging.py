@@ -24,10 +24,14 @@ class PackagingTests(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
         self.skill = self.root / "skills/chtets"
-        self.write("README.md", "# Fixture\n\n[Compact](docs/portable-prompt.md)\n"
+        self.write("README.md", "# Fixture\n\n"
+                   f"**Current version: [{DEFAULT_VERSION}](https://github.com/RIV1992/chtets/releases/tag/v{DEFAULT_VERSION})**\n"
+                   f"[Archive](https://github.com/RIV1992/chtets/releases/download/v{DEFAULT_VERSION}/chtets-v{DEFAULT_VERSION}.zip)\n"
+                   "[Compact](docs/portable-prompt.md)\n"
                    "[Extended](docs/portable-prompt-extended.md)\n[Sizes](docs/context-size.json)\n")
         for name in ("LICENSE", "CHANGELOG.md", "CONTRIBUTING.md", ".gitignore"):
             self.write(name, "Fixture public text\n")
+        self.write("CHANGELOG.md", f"# Changelog\n\n## {DEFAULT_VERSION} — 2026-09-20\n\nFixture release.\n")
         self.write(".github/workflows/check.yml", "name: Fixture\n")
         self.write("skills/chtets/agents/openai.yaml", "interface:\n  display_name: Chtets\n")
         self.write("docs/reference.md", "# Documentation\n")
@@ -64,6 +68,35 @@ class PackagingTests(unittest.TestCase):
         self.assertNotIn("OFFLINE_RESEARCH_SENTINEL", prompt)
         self.assertFalse(any(local_target(self.root / "docs/portable-prompt.md", match.group(1))
                              for match in LINK_RE.finditer(prompt)))
+
+    def test_inconsistent_release_metadata_is_rejected(self) -> None:
+        cases = (
+            ("README.md", f"[{DEFAULT_VERSION}]", "[9.9.9]"),
+            ("README.md", f"/tag/v{DEFAULT_VERSION}", "/tag/v9.9.9"),
+            ("README.md", f"chtets-v{DEFAULT_VERSION}.zip", "chtets-v9.9.9.zip"),
+            ("CHANGELOG.md", f"## {DEFAULT_VERSION}", "## 9.9.9"),
+        )
+        self.assertEqual(validate(self.root), [])
+        for name, old, new in cases:
+            path = self.root / name
+            original = path.read_text(encoding="utf-8")
+            with self.subTest(file=name, change=old):
+                path.write_text(original.replace(old, new), encoding="utf-8")
+                self.assertTrue(any("release metadata" in error for error in validate(self.root)))
+            path.write_text(original, encoding="utf-8")
+
+    def test_release_tag_matches_source(self) -> None:
+        self.assertEqual(validate(self.root, release_tag=f"v{DEFAULT_VERSION}"), [])
+        self.assertTrue(any("release tag" in error for error in validate(self.root, release_tag="v9.9.9")))
+
+    def test_archive_version_override_cannot_mislabel_source(self) -> None:
+        result = subprocess.run(
+            [sys.executable, str(self.root / "scripts/package.py"), "--root", str(self.root), "--version", "9.9.9"],
+            capture_output=True, text=True, check=False,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("release tag must be", result.stderr)
+        self.assertFalse((self.root / "dist").exists())
 
     def test_legacy_routing_preserves_task_modes(self) -> None:
         self.write("skills/chtets/SKILL.md", "---\nname: chtets\ndescription: Write accurate prose.\n---\n"

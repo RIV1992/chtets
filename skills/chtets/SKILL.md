@@ -65,7 +65,7 @@ Use the core alone for routine work. Read references for a specific difficulty; 
 | Cross-section dependencies, linked requirements, or cascading edits | [Meaning map](references/meaning-map.md) |
 | Author samples or a substantive voice adaptation | [Author voice](references/author-voice.md) |
 | A consequential genre convention | [Genres](references/genres.md) |
-| Rigorous criticism or complex interdependent text | [Review](references/review.md) |
+| Requested critique or unresolved editorial defects | [Review](references/review.md) |
 | Skill research or development | [Foundations](references/foundations.md) |
 
 ## Deliver

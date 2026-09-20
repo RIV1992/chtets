@@ -4,7 +4,9 @@ Use when a changed premise, requirement, definition, quantity, or status can aff
 
 ## Record only useful relationships
 
-Keep a small working table or notes, outside finished prose unless an audit trail is requested. Start with the claims needed for the current decision; expand when their dependencies require it. No graph software or fixed schema is required.
+Keep a small working table or notes, outside finished prose unless an audit trail is requested. Reuse an existing evidence table. Start with the claims needed for the current decision; expand when their dependencies require it. No graph software or fixed schema is required.
+
+For a requested completeness audit, also inventory requirements from the agreed source set, including those absent from the draft. Record each requirement's applicability, project evidence, report location, and unresolved status. Mark unread or unavailable material; coherent mapped claims alone do not establish complete coverage.
 
 For each material claim, retain:
 

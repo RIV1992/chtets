@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-20",
+  "version": "1.2.1",
+  "method": "Three fresh writing agents, one request each, with the same inherited host/model configuration. Requests and acceptance criteria were recorded before execution. Agents read the public skill candidate and any chosen references; they saw neither acceptance criteria nor other outputs. The parent model reviewed outputs against the raw requests, without blinded comparison. File inventories are agent-reported; paths below are relative to skills/chtets.",
+  "limits": "Synthetic functional checks only. No baseline, repeated sampling, human voice review, real standards assessment, long-report trial, latency or token measurement. Reported reads do not include hidden host context. Outputs do not establish quality gains or general context savings.",
+  "skill_sha256": {
+    "SKILL.md": "1b35d3d0c6f4ec93800feba159fed30e7024ef6abf2a1f610e6ea084ba8a1fcf",
+    "agents/openai.yaml": "44a521f317b2dbe9a4fd1baa47fbf3294dba22cdd39dfe22de88fae68ee4b531",
+    "references/author-voice.md": "1e2a06d1a41613e952fbfa8610579dc4718a0a527db9be47dd7a76960c18c13f",
+    "references/composition.md": "950ba23fa9c14a231137d9514b220d9a8cd13e2d54aa94901927351b8a3c8c62",
+    "references/evidence.md": "6163a52867c0d8f7fbfb414c637ecbef4113e56d6e5e5f5a658d4042f252a589",
+    "references/foundations.md": "536503154d290bd16bd431cccd433eaaba435f29830ec735eb635bdcfc1b331f",
+    "references/genres.md": "9ea809c63d3ea04e90a487c60f0873a6b65e5be6486c951865816629044f8deb",
+    "references/meaning-map.md": "2ac8915baa3c1a0bb1e2189c0a5e5b88ee6f1c664067f651c3ca14792cb2f754",
+    "references/review.md": "384e60f18c47e39136eb694de5c6424f24aa05a5b67697b6000936c8d4e5ea01"
+  },
+  "cases": [
+    {
+      "id": "routine",
+      "request": "Сократи сообщение до 35 слов, сохранив смысл. Верни только готовый абзац: «Коллеги, мы рассчитываем получить согласование в пятницу. Начало пилота зависит от этого согласования, поэтому пока не можем назвать дату запуска подтверждённой. Пожалуйста, пришлите ваши замечания к четвергу, чтобы мы успели их учесть».",
+      "acceptance_criteria": [
+        "At most 35 whitespace words",
+        "Friday approval is expected, not received",
+        "Launch remains conditional on approval",
+        "Comments requested by Thursday",
+        "No unsolicited map or critique"
+      ],
+      "output": "Коллеги, рассчитываем получить согласование в пятницу. От него зависит начало пилота, поэтому дата запуска пока не подтверждена. Пожалуйста, пришлите замечания к четвергу, чтобы мы успели их учесть.",
+      "files_read": [
+        "SKILL.md"
+      ],
+      "parent_review": "27 whitespace words; expected Friday approval, conditional launch and Thursday request preserved. No extra audit or map."
+    },
+    {
+      "id": "coverage",
+      "request": "Проверь полноту черновика отчёта по всем переданным требованиям. Верни одну рабочую таблицу на основе существующей и короткий вывод о готовности; сам отчёт пока не переписывай. Все документы вымышленные, внешние источники не нужны.\nДоговор Д-7, п. 3: отчёт должен содержать описание метода M, результаты 12 измерений, подписанный протокол калибровки датчика S и приложение по составу из приложения Д. Изменение №2, п. 1: число измерений в п. 3 заменено на 16; п. 2: в отчёт дополнительно включается оценка неопределённости измерений. Иных изменений нет. Приложение Д не предоставлено.\nДанные проекта: метод M описан в записке М-1; журнал Ж-4 содержит 16 результатов; калибровка S запланирована, подписанного протокола нет; оценка неопределённости не подготовлена.\nЧерновик: «1. Метод M применён по записке М-1. 2. В таблице 1 приведены 16 результатов журнала Ж-4. Вывод: отчёт полностью готов к сдаче». Весь текст черновика приведён здесь, приложений нет.\nСуществующая таблица: R1 | метод M | записка М-1 | раздел 1; R2 | 16 результатов | журнал Ж-4 | раздел 2, таблица 1.",
+      "acceptance_criteria": [
+        "Method and 16 measurements covered with exact amended basis",
+        "Signed calibration protocol outstanding; planned is not complete",
+        "Uncertainty assessment required but absent",
+        "Appendix required, missing source prevents knowing full content",
+        "Existing R1/R2 retained or traceably mapped in one table",
+        "No claim of full readiness or invented appendix content"
+      ],
+      "output": "| ID | Действующее требование и основание | Применимость | Данные проекта по условию | Место и состояние в черновике | Статус и необходимое действие |\n|---|---|---|---|---|---|\n| R1 | Описание метода M — договор Д-7, п. 3 | Применимо; не изменено | Метод описан в записке М-1 | Раздел 1: только ссылка на М-1 и утверждение о применении метода; самого описания нет | Не выполнено в отчёте. Включить описание метода из М-1. |\n| R2 | 16 результатов измерений — договор Д-7, п. 3 с учётом Изменения №2, п. 1 | Применимо; 16 заменяет 12, отдельного требования о 12 результатах больше нет | Журнал Ж-4 содержит 16 результатов | Раздел 2 ссылается на таблицу 1, но в предоставленном полном тексте таблицы и результатов нет | Не выполнено в отчёте. Включить таблицу с 16 результатами и сверить её с Ж-4. |\n| R3 | Подписанный протокол калибровки датчика S — договор Д-7, п. 3 | Применимо; не изменено | Калибровка запланирована; подписанного протокола нет | Отсутствует; приложений нет | Не выполнено. Провести калибровку, оформить подписанный протокол и включить его в отчёт. План калибровки требование не закрывает. |\n| R4 | Приложение установленного состава — договор Д-7, п. 3; состав определяется приложением Д | Обязанность применима; конкретный состав неизвестен | Приложение Д не предоставлено; сведений о подготовке требуемого приложения нет | Отсутствует; приложений нет | Не выполнено по наличию; полноту состава проверить невозможно. Получить приложение Д, раскрыть его требования в этой же таблице и подготовить приложение к отчёту. |\n| R5 | Оценка неопределённости измерений — Изменение №2, п. 2 | Применимо; дополнительное требование | Оценка не подготовлена | Отсутствует | Не выполнено. Подготовить оценку неопределённости и включить её в отчёт. |\n\nЧерновик не готов к сдаче: ни одна из пяти обязательных позиций не закрыта в представленном полном тексте. Все требования из переданных положений учтены, но детальную полноту приложения нельзя проверить без приложения Д. Вывод «отчёт полностью готов к сдаче» противоречит выявленным пробелам и требует пересмотра при последующей правке.",
+      "files_read": [
+        "SKILL.md",
+        "references/meaning-map.md",
+        "references/review.md",
+        "references/evidence.md"
+      ],
+      "parent_review": "All five requirement categories recorded in one table with R1/R2 retained; amendment, missing protocol, uncertainty and unavailable Appendix D handled. The output also treats the method description and results table as absent: the request explicitly supplied the entire draft, which only referred to them. 'Covered' in the acceptance inventory is not evidence that a requirement is satisfied. No real contract or standard was assessed."
+    },
+    {
+      "id": "dependent_edit",
+      "request": "Обнови только затронутые фрагменты отчёта и существующую рабочую таблицу после исправления исходных данных: участников пилота было 20, а не 12; девять положительных самоотчётов остались без изменений. Верни исправленный текст и таблицу. Не добавляй отдельный редакторский разбор. Внешние источники не нужны.\nТекст: «Заголовок: Большинство участников оценило пилот положительно. Результаты: 9 из 12 участников сообщили об удобстве. Таблица 1: положительные самоотчёты — 9; участники — 12; доля — 75%. Вывод: большинство участников сообщило об удобстве; это наблюдение относится только к этому пилоту. Бюджет: 24 000 рублей. Примечание: контрольной группы не было».\nРабочая таблица: N | число участников, 12 | результаты и таблица 1; P | доля положительных самоотчётов, 75% | таблица 1; C | большинство | заголовок и вывод.",
+      "acceptance_criteria": [
+        "Count20,9positive,45% in all dependent places",
+        "Majority removed from headline and conclusion",
+        "Self-report/pilot scope/control absence preserved",
+        "Budget24000 unchanged",
+        "Existing map updated, no separate editorial critique"
+      ],
+      "output": "Заголовок: 45% участников оценили пилот положительно.\n\nРезультаты: 9 из 20 участников сообщили об удобстве.\n\nТаблица 1: положительные самоотчёты — 9; участники — 20; доля — 45%.\n\nВывод: 45% участников сообщили об удобстве; это наблюдение относится только к этому пилоту.\n\nБюджет: 24 000 рублей.\n\nПримечание: контрольной группы не было.\n\nРабочая таблица:\n\n| Код | Данные или утверждение | Место в отчёте |\n| --- | --- | --- |\n| N | число участников, 20 | результаты и таблица 1 |\n| P | доля положительных самоотчётов, 45% | таблица 1 |\n| C | 45% участников | заголовок и вывод |",
+      "files_read": [
+        "SKILL.md",
+        "references/meaning-map.md"
+      ],
+      "parent_review": "9/20 = 45%; headline, results, table, conclusion and existing map updated. Budget, self-report and pilot scope, and missing control group retained. No separate critique."
+    }
+  ]
+}

@@ -5,41 +5,41 @@
     "skills/chtets/SKILL.md": 798,
     "skills/chtets/references/author-voice.md": 309,
     "skills/chtets/references/composition.md": 520,
-    "skills/chtets/references/evidence.md": 569,
+    "skills/chtets/references/evidence.md": 581,
     "skills/chtets/references/foundations.md": 134,
     "skills/chtets/references/genres.md": 568,
-    "skills/chtets/references/meaning-map.md": 428,
-    "skills/chtets/references/review.md": 322,
+    "skills/chtets/references/meaning-map.md": 477,
+    "skills/chtets/references/review.md": 330,
     "docs/portable-prompt.md": 842,
-    "docs/portable-prompt-extended.md": 3555
+    "docs/portable-prompt-extended.md": 3624
   },
   "characters_by_file": {
-    "skills/chtets/SKILL.md": 5749,
+    "skills/chtets/SKILL.md": 5750,
     "skills/chtets/references/author-voice.md": 2253,
     "skills/chtets/references/composition.md": 3608,
-    "skills/chtets/references/evidence.md": 4110,
+    "skills/chtets/references/evidence.md": 4191,
     "skills/chtets/references/foundations.md": 1092,
     "skills/chtets/references/genres.md": 4292,
-    "skills/chtets/references/meaning-map.md": 3000,
-    "skills/chtets/references/review.md": 2212,
+    "skills/chtets/references/meaning-map.md": 3367,
+    "skills/chtets/references/review.md": 2281,
     "docs/portable-prompt.md": 5879,
-    "docs/portable-prompt-extended.md": 25545
+    "docs/portable-prompt-extended.md": 26062
   },
   "utf8_bytes_by_file": {
-    "skills/chtets/SKILL.md": 5749,
+    "skills/chtets/SKILL.md": 5750,
     "skills/chtets/references/author-voice.md": 2269,
     "skills/chtets/references/composition.md": 3648,
-    "skills/chtets/references/evidence.md": 4128,
+    "skills/chtets/references/evidence.md": 4209,
     "skills/chtets/references/foundations.md": 1092,
     "skills/chtets/references/genres.md": 4301,
-    "skills/chtets/references/meaning-map.md": 3016,
-    "skills/chtets/references/review.md": 2212,
+    "skills/chtets/references/meaning-map.md": 3383,
+    "skills/chtets/references/review.md": 2281,
     "docs/portable-prompt.md": 5881,
-    "docs/portable-prompt-extended.md": 25646
+    "docs/portable-prompt-extended.md": 26163
   },
   "native_core_words": 798,
-  "runtime_reference_words": 2716,
-  "all_skill_markdown_words": 3648,
+  "runtime_reference_words": 2785,
+  "all_skill_markdown_words": 3717,
   "compact_prompt_words": 842,
-  "extended_prompt_words": 3555
+  "extended_prompt_words": 3624
 }

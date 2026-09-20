@@ -132,12 +132,53 @@ def local_target(source: Path, raw: str) -> Path | None:
     return (source.parent / unquote(parsed.path)).resolve()
 
 
-def validate(root: Path, require_prompt: bool = False) -> list[str]:
+def validate_release_metadata(root: Path, release_tag: str | None = None) -> list[str]:
+    """Check the current release without importing or executing the build script."""
+    paths = [root / name for name in ("scripts/package.py", "README.md", "CHANGELOG.md")]
+    if not all(path.is_file() for path in paths):
+        return []  # Required-file validation reports the missing prerequisite.
+    try:
+        tree = ast.parse(paths[0].read_text(encoding="utf-8"))
+    except (SyntaxError, UnicodeError):
+        return ["release metadata: cannot read the package version"]
+    versions = [node.value.value for node in tree.body
+                if isinstance(node, ast.Assign)
+                and any(isinstance(target, ast.Name) and target.id == "DEFAULT_VERSION"
+                        for target in node.targets)
+                and isinstance(node.value, ast.Constant) and isinstance(node.value.value, str)]
+    if len(versions) != 1 or not re.fullmatch(r"\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?", versions[0]):
+        return ["release metadata: package.py must declare one literal DEFAULT_VERSION"]
+    version = versions[0]
+    errors = []
+    try:
+        readme = paths[1].read_text(encoding="utf-8")
+        changelog = paths[2].read_text(encoding="utf-8")
+    except UnicodeError:
+        return ["release metadata: README and CHANGELOG must be UTF-8 text"]
+    releases = "https://github.com/RIV1992/chtets/releases"
+    current = re.findall(r"\*\*Current version: \[([^\]]+)\]\(([^)\n]+)\)\*\*", readme)
+    if current != [(version, f"{releases}/tag/v{version}")]:
+        errors.append(f"release metadata: README current version and tag link must match {version}")
+    downloads = re.findall(re.escape(releases) + r"/download/[^)\s]+", readme)
+    install = f"{releases}/download/v{version}/chtets-v{version}.zip"
+    allowed = {install, f"{releases}/download/v{version}/chtets-source-v{version}.zip"}
+    if install not in downloads or any(url not in allowed for url in downloads):
+        errors.append(f"release metadata: README archive links must match {version}")
+    heading = re.search(r"^##\s+(\S+)", changelog, re.MULTILINE)
+    if not heading or heading.group(1) != version:
+        errors.append(f"release metadata: first CHANGELOG entry must be {version}")
+    if release_tag is not None and release_tag != f"v{version}":
+        errors.append(f"release metadata: release tag must be v{version}, got {release_tag}")
+    return errors
+
+
+def validate(root: Path, require_prompt: bool = False, release_tag: str | None = None) -> list[str]:
     root = root.resolve()
     errors: list[str] = []
     for name in REQUIRED_FILES:
         if not (root / name).is_file():
             errors.append(f"missing required file: {name}")
+    errors.extend(validate_release_metadata(root, release_tag))
     for directory in ("docs", "examples", "skills/chtets/references"):
         if not any((root / directory).glob("*.md")):
             errors.append(f"{directory}/ must contain at least one Markdown file")
@@ -241,8 +282,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT, help="repository root")
     parser.add_argument("--require-prompt", action="store_true", help="also require both standalone prompts and their size report")
+    parser.add_argument("--release-tag", help="also require this tag to match the source package version")
     args = parser.parse_args()
-    errors = validate(args.root, require_prompt=args.require_prompt)
+    errors = validate(args.root, require_prompt=args.require_prompt, release_tag=args.release_tag)
     if errors:
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)
