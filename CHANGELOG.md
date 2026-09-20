@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 — 2026-09-20
+
+- Put installation and chat use first; explain that Python is a maintainer tool.
+- Add a practical source-to-decision research guide and preserve the detailed QuestBench audit separately.
+- Correct a teaching example that added an unsupported urgency requirement and clarify Self-Refine's ablation description.
+- Remove reproducible evaluation bundles and cached summaries while preserving original evidence and reconstruction commands.
+- Refresh contribution instructions and historical wording. The writing core and references are unchanged.
+
 ## 1.1.0 — 2026-09-19
 
 - Reduced the core from 1,248 to 792 whitespace words and all skill Markdown from 5,960 to 3,048 words; optional references resolve specific difficulties.

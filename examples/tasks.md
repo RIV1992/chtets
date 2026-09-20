@@ -84,3 +84,18 @@ the emotion or ending with a moral. Invention is welcome.
 ```
 
 Check that the prose retains rhythm and implication instead of turning into a factual report or a checklist.
+
+## 7. Check a claim against its source
+
+```text
+Use Chtets to check this draft against the supplied excerpt only.
+Return a supported replacement sentence, then briefly explain what
+the excerpt does not establish. Do not research externally.
+
+Source excerpt: “In our July pilot, 18 of the 24 respondents said the new
+checklist was easier to follow. We did not measure task completion time.”
+
+Draft: “The new checklist made the whole team faster.”
+```
+
+Check that the replacement attributes the finding to the excerpt, preserves the respondent count, and reports ease of use without claiming faster work or a result for the whole team. This checks support within the supplied material; it does not independently verify the report's truth.

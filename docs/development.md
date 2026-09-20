@@ -1,14 +1,12 @@
 # Developing a compact writing skill
 
-The current development work starts from commit `78f01bfaaa125fb9cff56640fd20dea6983b93f0`. Its aim is to make a few editorial decisions more explicit while removing unnecessary runtime instructions.
+Version 1.1.0 established the compact workflow; version 1.1.1 cleans up its documentation and evidence archive. The writing instructions are unchanged. A small comparison found no critical compression regression on the selected tasks. Three extra research instructions showed no discriminating benefit in separate probes and were not adopted. See the [evaluation record](../evaluations/2026-09-19/README.md) for the frozen source versions, outputs, and limitations.
 
 ## Separate the questions
 
-Compare A (the previous release) with B (a compact version preserving its editorial rules) before testing new mechanisms. Otherwise a shorter instruction set and a new editing procedure would be confounded. Research additions are separate hypotheses, not benefits inherited from their source papers.
+Compare a compact version preserving existing rules with its predecessor before testing new mechanisms. Otherwise compression and a new editing procedure would be confounded. The [research-to-practice guide](research.md) connects the most useful source findings to existing decisions; the [34-source corpus](../research/2026-09-19/README.md) preserves the fuller evidence and limits.
 
-The [34-source register](../research/2026-09-19/README.md) motivates targeted checks of claim scope, dependencies across sentences, purposeful revision, source support and author voice. It stays outside the installed workflow. See [evaluation](evaluation.md) for actual observations and limitations.
-
-Version 1.1.0 retains B. Separate probes of the first three mechanisms showed no incremental benefit on the selected inputs; the extra instructions remain development hypotheses. Evidence-state and author-voice extensions await more discriminating tasks and author review. The absence of a measured benefit does not refute the underlying research or show that a mechanism never helps.
+Claim boundaries, dependent spans, and purposeful revision remain useful research questions. Evidence-state and author-voice extensions await more discriminating tasks and author review. A small inconclusive probe neither establishes a benefit nor shows that a mechanism never helps.
 
 ## Instruction ownership
 
@@ -40,3 +38,24 @@ Check critical meaning and instruction failures before stylistic preference. Ret
 A small synthetic check can reveal a regression but does not establish general superiority. If a new mechanism shows no discriminating benefit, report it as inconclusive rather than advertising an improvement. Preserve mixed findings, judge disagreement, examples where no change is best and the cost of any additional verification.
 
 Keep personal profiles outside the public package. When updating a personal installation, preserve scoped preferences and check semantic equivalence with the portable instructions rather than replacing the profile with public defaults.
+
+## Maintainer tools
+
+Python is needed only to validate and build repository artifacts. Copying the skill folder or using a prepared prompt requires no Python. The tools use the standard library and need Python 3.10 or later:
+
+```sh
+python3 scripts/validate.py
+python3 -m unittest discover -s tests
+python3 scripts/package.py
+```
+
+Edit the source skill and references, then review and commit the regenerated `docs/portable-prompt.md`, `docs/portable-prompt-extended.md`, and `docs/context-size.json`. CI checks that all three match the source. On Windows, `python` or `py -3` can replace `python3`.
+
+The builder produces two versioned archives under `dist/` and records their SHA-256 hashes in `dist/SHA256SUMS`:
+
+| Archive | Contents |
+| --- | --- |
+| `chtets-v1.1.1.zip` | One `chtets/` folder containing the skill, references, agent metadata, and license |
+| `chtets-source-v1.1.1.zip` | The public source, documentation, research annotations, evaluation evidence, and maintainer tools |
+
+Build outputs and analysis caches are not source files. Research and evaluation material stay outside the installable archive and both prompts. When reorganizing recorded evidence, preserve original inputs, outputs, judgments, mappings, and source versions; regenerate joins and totals instead of storing parallel copies. See the [evaluation artifact commands](../evaluations/2026-09-19/README.md#artifacts-and-reuse).

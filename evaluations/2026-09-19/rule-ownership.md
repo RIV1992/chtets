@@ -63,11 +63,11 @@ The original foundations transfer table duplicated core, evidence, composition, 
 
 ## Examples and development material
 
-The six composition teaching pairs are unchanged in `examples/practice-pairs.md`. They are excluded from normal runtime references. A note marks them as public development examples rather than unseen evaluation material. The example profile was removed from author-voice; its rule survives as direct profile support, and the repository already contains `examples/author-profile.example.md`. The evidence pilot example was removed; its lessons remain as metric/population/causal boundaries in evidence, composition, and core. No example was promoted into a universal rule.
+During the compression pass, the six composition teaching pairs were moved without edits to `examples/practice-pairs.md`. A later documentation review on 2026-09-20 removed unsupported urgency from pair 6; that correction does not change the tested runtime instructions. They are excluded from normal runtime references. A note marks them as public development examples rather than unseen evaluation material. The example profile was removed from author-voice; its rule survives as direct profile support, and the repository already contains `examples/author-profile.example.md`. The evidence pilot example was removed; its lessons remain as metric/population/causal boundaries in evidence, composition, and core. No example was promoted into a universal rule.
 
-## Meaning risks to verify
+## Preservation checks and limits
 
-1. Check the shortened core still explicitly owns all invariants above, especially technical terms, delivery boundaries, no sending authorization, and important qualifiers. This reference-only edit does not establish that the separately edited core does so.
+1. The table records the intended ownership of retained rules, including technical terms, delivery boundaries, no sending authorization, and important qualifiers. The [recorded comparison](README.md) covered the compact core and references on short synthetic inputs; this audit and that limited run do not establish semantic equivalence for every task.
 2. The standalone runtime skill no longer includes the full developer evaluation procedure; its absolute link requires external access. Routine writing remains self-contained. Development users without network access need the repository's bundled `docs/evaluation.md`.
-3. Word count is lower, but semantically dense sentences may be harder to apply. Behavioral comparison remains necessary; compression alone is not proof of improvement.
+3. Word count is lower, but semantically dense sentences may be harder to apply. The recorded comparison found mostly ties and no judge-reported critical regressions on its limited inputs; compression alone is not proof of improvement.
 4. Existing research uncertainty is retained. The wording “no performance gain is established for this release” must be revisited only after appropriate comparative evidence, not after package validation.

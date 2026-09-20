@@ -15,7 +15,7 @@ from validate import (
     DEFINITION_RE, LINK_RE, ROOT, SKILL_REL, local_target, parse_frontmatter, source_files, validate,
 )
 
-DEFAULT_VERSION = "1.1.0"
+DEFAULT_VERSION = "1.1.1"
 ZIP_TIMESTAMP = (2020, 1, 1, 0, 0, 0)
 RUNTIME_REFERENCES = (
     "author-voice.md", "composition.md", "evidence.md", "genres.md", "review.md",

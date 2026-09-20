@@ -12,6 +12,19 @@ The native core is 792 words (previously 1,248), and the default self-contained 
 
 Read the [full protocol, findings, limitations, and saved outputs](../evaluations/2026-09-19/README.md). The runs were language batches in one host, with one sample per condition and model reviewers; exact internal computation and token use were unavailable. Human voice review, a second native client, and long-context interference were not tested. The published inputs are now development material, not an unseen test set.
 
+## A useful comparison for your work
+
+1. Choose fresh tasks representative of your own writing. Keep personal material private.
+2. Define the required facts, constraints, and prohibited distortions before drafting.
+3. Use the same model, source material, tools, and budget for both conditions. Change only whether the skill is supplied.
+4. Preserve both outputs. Hide their origin and vary their order for the reviewer.
+5. Assess correctness and task completion first. Then compare coherence, clarity, voice, and economy. Allow ties.
+6. Repeat on several topics and have the intended author review voice. Report the task set, conditions, and uncertainty alongside any result.
+
+A false promise, missing condition, invented anecdote, or distorted quotation is a blocking defect. A stylistic preference cannot compensate for it. Conversely, a different valid wording should not fail just because it does not match a single reference sentence.
+
+The [example tasks](../examples/tasks.md) are public development examples. Once used to tune the skill, they should not also serve as unseen test evidence.
+
 ## Earlier prototype
 
 Before this public English release, a personalized Russian prototype was tried on six synthetic tasks: a French payment email, an English expert comment, a Russian pilot update, a verbatim memory, a plain-language explanation, and a fictional scene.
@@ -25,9 +38,9 @@ Two separate agent runs used the same requests, one with the prototype and one w
 
 Two pairs were ties. This is an illustrative result, not a controlled efficacy study. There was one run per condition; the computational budget was not matched; the prototype condition used additional drafting agents for two tasks. The reviewer was a model, not the author or an independent human panel.
 
-The English public version generalizes and translates that prototype. The table is not a measured performance result for this release. Its role is to document the origin and limits of an earlier check, not to advertise a win rate.
+Version 1.0.0 generalized and translated that prototype. The table is not a measured performance result for the public skill. Its role is to document the origin and limits of an earlier check, not to advertise a win rate.
 
-## Release checks
+## Version 1.0.0: package and smoke checks
 
 For version 1.0.0, the package validator passed: required files, basic skill metadata, local links, and self-contained references were checked. Both ZIP archives passed integrity checks; rebuilding produced identical bytes. Deliberately broken links, private markers, and references outside the skill folder were rejected by the validator.
 
@@ -42,16 +55,3 @@ A fresh agent read the public English skill and completed three synthetic reques
 These are functional checks from one run, reviewed by another model. They do not measure improvement over an unassisted model or establish performance across languages, genres, or agent clients.
 
 The installer paths in [installation.md](installation.md) were checked against client documentation. Native integration has not been executed in every listed client. Successful package validation does not establish literary quality or factual correctness.
-
-## A useful comparison for your work
-
-1. Choose fresh tasks representative of your own writing. Keep personal material private.
-2. Define the required facts, constraints, and prohibited distortions before drafting.
-3. Use the same model, source material, tools, and budget for both conditions. Change only whether the skill is supplied.
-4. Preserve both outputs. Hide their origin and vary their order for the reviewer.
-5. Assess correctness and task completion first. Then compare coherence, clarity, voice, and economy. Allow ties.
-6. Repeat on several topics and have the intended author review voice. Report the task set, conditions, and uncertainty alongside any result.
-
-A false promise, missing condition, invented anecdote, or distorted quotation is a blocking defect. A stylistic preference cannot compensate for it. Conversely, a different valid wording should not fail just because it does not match a single reference sentence.
-
-The [example tasks](../examples/tasks.md) are public development examples. Once used to tune the skill, they should not also serve as unseen test evidence.

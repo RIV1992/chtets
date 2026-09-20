@@ -2,6 +2,8 @@
 
 Chtets is a folder of writing instructions and references. It does not need an API key, a running server, or its own model subscription. You need an agent that can read the files; the agent's own access requirements still apply.
 
+Installing and using Chtets does not require Python. Python is used only for repository maintenance, such as validation and packaging.
+
 Choose one installation method. The instructions below were checked against official documentation on September 19, 2026. They describe documented integration paths, not completed runtime tests on every product.
 
 ## Option 1: use the Skills CLI
@@ -79,7 +81,7 @@ This installs for local Codex. Change `$chtetsParent` for another agent. An agen
 
 Copy the full `skills/chtets/` folder from the current repository, or use a versioned skill ZIP from the [releases page](https://github.com/RIV1992/chtets/releases). Check the release version: an older release may precede the current repository instructions.
 
-To build transferable archives from the current checkout, run `python3 scripts/package.py` with Python 3.10 or later. Version 1.1.0 produces `dist/chtets-v1.1.0.zip` with `chtets/SKILL.md`, `chtets/references/`, `chtets/agents/`, and `chtets/LICENSE` under one top-level folder. After extraction, copy `chtets/` to the destination in the table. `dist/chtets-source-v1.1.0.zip` additionally includes documentation, research annotations, and development files. `dist/SHA256SUMS` records both archive hashes.
+Extract the release skill ZIP and copy its `chtets/` folder to a destination in the table. The folder includes `SKILL.md` and its bundled references. To build archives from a source checkout, see [maintainer tools](development.md#maintainer-tools).
 
 GitHub's **Download ZIP** contains the whole repository. In that archive, the installable folder is inside `skills/chtets/`; the repository ZIP itself is not a skill-only upload package.
 

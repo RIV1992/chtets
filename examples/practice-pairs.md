@@ -58,9 +58,8 @@ Combining the sentences preserves the reason for the request and removes repetit
 
 **Before:** “Everyone on our team must report an error within five minutes.”
 
-**After:** “I want people to flag an error immediately, even when they do not have a solution yet.”
+**After:** “I want people to report an error even before they have a solution.”
 
 The revision states the author's position and removes an invented rule and metric.
-
 
 These public teaching examples are not unseen evaluation material. For fresh comparisons, follow [the evaluation guide](../docs/evaluation.md).
