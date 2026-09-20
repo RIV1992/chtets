@@ -2,6 +2,7 @@
 
 ## 1.2.0 — 2026-09-20
 
+- Rewrite the repository introduction around meaning, sources, and dependent report sections; align the visible version and release downloads, and exclude local architecture caches.
 - Add an optional meaning map for claims, grounds, conditions, and dependencies across report sections; follow affected tables, summaries, and conclusions after an edit.
 - Clarify source reading for standards: exact editions and clauses, applicability, exceptions, and evidence of project compliance remain distinct.
 - Preserve compact routine work, restricted editing permissions, deliberate literary ambiguity, and private author profiles.
