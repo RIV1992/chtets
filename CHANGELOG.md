@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.1 — 2026-09-20
+
+- Check that the README version, release and archive links, top changelog entry, package version, and supplied release tag agree; reject mislabeled archive builds.
+- Protect the meaning-map release evidence with frozen-file hashes, matching case IDs, and valid anonymous pair mappings.
+- Narrow full editorial-review routing to requested critique or unresolved defects; reuse an existing evidence table for dependencies.
+- For requested completeness audits, inventory source requirements missing from the draft and disclose unread or unavailable material. Add a synthetic coverage example.
+- Keep the compact writing workflow and private author preferences; real standards-based report performance and context savings remain unestablished.
+
 ## 1.2.0 — 2026-09-20
 
 - Rewrite the repository introduction around meaning, sources, and dependent report sections; align the visible version and release downloads, and exclude local architecture caches.

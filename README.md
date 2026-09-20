@@ -4,7 +4,7 @@ Chtets is a portable writing and editing skill for AI agents. It guides the agen
 
 Use it for everyday correspondence, articles, technical reports, translation, and creative prose. The instructions are written in English and include guidance for English, French, and Russian.
 
-**Current version: [1.2.0](https://github.com/RIV1992/chtets/releases/tag/v1.2.0)** · [Install](docs/installation.md) · [Use in a chat](docs/portable-prompt.md) · [Examples](examples/tasks.md)
+**Current version: [1.2.1](https://github.com/RIV1992/chtets/releases/tag/v1.2.1)** · [Install](docs/installation.md) · [Use in a chat](docs/portable-prompt.md) · [Examples](examples/tasks.md)
 
 ## Start with your text
 
@@ -24,7 +24,7 @@ Make the reasoning easy to follow. Return the finished text first.
 [Draft and supporting material]
 ```
 
-You can also [copy the skill folder](docs/installation.md#option-2-copy-the-skill-folder) or download the [installable archive](https://github.com/RIV1992/chtets/releases/download/v1.2.0/chtets-v1.2.0.zip). Keep the whole folder so its references remain available.
+You can also [copy the skill folder](docs/installation.md#option-2-copy-the-skill-folder) or download the [installable archive](https://github.com/RIV1992/chtets/releases/download/v1.2.1/chtets-v1.2.1.zip). Keep the whole folder so its references remain available.
 
 **Chtets is Markdown guidance. Using it requires no Python, server, or executable code from this repository.** Its host agent supplies the model and any tools needed for your task.
 
@@ -54,7 +54,7 @@ These examples use synthetic facts.
 
 For interdependent work, the optional [meaning map](docs/meaning-map.md) records claims, grounds, conditions, and affected passages. In a report built from standards, it keeps the exact requirement and its applicability separate from evidence that the project satisfies it. An edition change or exception can alter the conclusion; a planned test does not establish compliance.
 
-The map is a working interpretation that must be checked against the material. Routine messages use the core directly. See the [worked example](examples/meaning-map.md) and [editing practice pairs](examples/practice-pairs.md).
+The map is a working interpretation that must be checked against the material. For a completeness audit, also look for source requirements absent from the draft and record unread or unavailable material. Reuse one working table for evidence and dependencies. Routine messages use the core directly. See the [worked example](examples/meaning-map.md) and [editing practice pairs](examples/practice-pairs.md).
 
 ## Use it across agents and chats
 
@@ -62,13 +62,15 @@ The package follows the `SKILL.md` folder structure. The [installation guide](do
 
 For a chat without native skill support, attach the self-contained [compact prompt](docs/portable-prompt.md). The [extended prompt](docs/portable-prompt-extended.md) includes all six operational guides. These are manual prompts; attaching one does not install a persistent skill.
 
-The core contains **798 whitespace words**, and the compact prompt **842**. Optional references are read for specific difficulties. The extended prompt contains **3,555 words**, all supplied when pasted. These are file word counts, not model tokens or measured per-task context. [Size report](docs/context-size.json).
+The core contains **798 whitespace words**, and the compact prompt **842**. Optional references are read for specific difficulties. The extended prompt contains **3,624 words**, all supplied when pasted. These are file word counts, not model tokens or measured per-task context. [Size report](docs/context-size.json).
 
 To personalize it, provide a style guide or writing samples. Keep completed profiles private and apply preferences within their scope. [Author-profile example](examples/author-profile.example.md) · [Customization](docs/customization.md).
 
 ## Evidence and limits
 
 The [evaluation record](docs/evaluation.md) preserves tasks, outputs, judgments, and limitations. The v1.2.0 check compared eight synthetic requests with v1.1.1: the model reviewer reported no critical failures in either version, seven ties, and one slight preference for the new version. This does not establish a general improvement or performance on full-length reports with real standards.
+
+Version 1.2.1 adds three separate functional checks of routine restraint, dependent edits, and requirement coverage. Their saved outputs support those individual observations; there is no baseline comparison or measured context saving.
 
 Chtets guides the agent's work. Accuracy still depends on source access, interpretation, and review. It cannot supply missing evidence or guarantee an author's voice. The [research guide](docs/research.md) explains which findings inform the instructions; research and evaluation archives remain outside the installed skill.
 

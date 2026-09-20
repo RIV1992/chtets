@@ -6,7 +6,7 @@ Use for substantial factual claims, research, conflicting sources, or exact quot
 
 Distinguish supplied information, externally verified fact, a source's claim, inference, and proposed wording. Lack of confirmation is not refutation; confident wording adds no evidence.
 
-For substantial factual work, use a working map when useful: exact claim → supporting passage or supplied fact → actor, date, version, unit, limits → retain, narrow, clarify, or omit. Show it only when requested or useful as an audit deliverable.
+For substantial factual work, use a working map when useful: exact claim → supporting passage or supplied fact → actor, date, version, unit, limits → retain, narrow, clarify, or omit. Reuse an existing claim or requirements table; add needed evidence fields there. Show it only when requested or useful as an audit deliverable.
 
 ## Read the relevant material
 

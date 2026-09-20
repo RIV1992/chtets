@@ -1,6 +1,6 @@
 # Editorial review
 
-Use for complex work or requested audits; the core's two passes suffice for short edits. This is an editorial rubric, not a scientific quality scale.
+Use for requested critique or an unresolved editorial defect; the core's two passes suffice otherwise. Interdependent text alone does not require this guide. This is an editorial rubric, not a scientific quality scale.
 
 ## Resolve blocking defects first
 

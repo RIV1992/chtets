@@ -12,10 +12,13 @@ The inspiration is [diskd-ai Codespaces](https://github.com/diskd-ai/codespaces/
 | A condition changes several conclusions | Trace its dependent passages |
 | Several sources jointly support a conclusion | Record their distinct contributions and limits |
 | Technical report with standards | Connect exact requirements, applicability, project evidence, and report sections |
+| Requested completeness audit | Inventory source requirements, including omissions from the draft, and state the boundary of material checked |
 | Deliberately ambiguous fiction | Preserve its design; do not force factual graph structure |
 | Punctuation-only editing or locked quotation | Respect the editing permission; flag conflicts separately when material |
 
 The [runtime reference](../skills/chtets/references/meaning-map.md) owns the procedure. Evidence reading remains in [evidence.md](../skills/chtets/references/evidence.md); the map does not duplicate source verification.
+
+Reuse one working table when evidence and dependency tracking concern the same claims. Full editorial-review guidance is needed for requested critique or unresolved defects, rather than for every text with dependencies. These routing refinements in v1.2.1 have not established measured context savings.
 
 ## Follow a changed basis
 

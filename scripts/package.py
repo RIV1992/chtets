@@ -15,7 +15,7 @@ from validate import (
     DEFINITION_RE, LINK_RE, ROOT, SKILL_REL, local_target, parse_frontmatter, source_files, validate,
 )
 
-DEFAULT_VERSION = "1.2.0"
+DEFAULT_VERSION = "1.2.1"
 ZIP_TIMESTAMP = (2020, 1, 1, 0, 0, 0)
 RUNTIME_REFERENCES = (
     "author-voice.md", "composition.md", "evidence.md", "genres.md", "meaning-map.md", "review.md",
@@ -186,12 +186,12 @@ def context_size_report(root: Path, compact: str, extended: str) -> dict[str, ob
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT, help="repository root")
-    parser.add_argument("--version", default=DEFAULT_VERSION, help="release version, without a v prefix")
+    parser.add_argument("--version", default=DEFAULT_VERSION, help="release version matching the target source, without a v prefix")
     args = parser.parse_args()
     if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?", args.version):
         parser.error("--version must be a semantic version such as 1.0.0")
     root = args.root.resolve()
-    errors = validate(root)
+    errors = validate(root, release_tag=f"v{args.version}")
     if errors:
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)

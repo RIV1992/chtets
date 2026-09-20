@@ -143,7 +143,7 @@ Use for substantial factual claims, research, conflicting sources, or exact quot
 
 Distinguish supplied information, externally verified fact, a source's claim, inference, and proposed wording. Lack of confirmation is not refutation; confident wording adds no evidence.
 
-For substantial factual work, use a working map when useful: exact claim → supporting passage or supplied fact → actor, date, version, unit, limits → retain, narrow, clarify, or omit. Show it only when requested or useful as an audit deliverable.
+For substantial factual work, use a working map when useful: exact claim → supporting passage or supplied fact → actor, date, version, unit, limits → retain, narrow, clarify, or omit. Reuse an existing claim or requirements table; add needed evidence fields there. Show it only when requested or useful as an audit deliverable.
 
 ### Read the relevant material
 
@@ -224,7 +224,9 @@ Use when a changed premise, requirement, definition, quantity, or status can aff
 
 ### Record only useful relationships
 
-Keep a small working table or notes, outside finished prose unless an audit trail is requested. Start with the claims needed for the current decision; expand when their dependencies require it. No graph software or fixed schema is required.
+Keep a small working table or notes, outside finished prose unless an audit trail is requested. Reuse an existing evidence table. Start with the claims needed for the current decision; expand when their dependencies require it. No graph software or fixed schema is required.
+
+For a requested completeness audit, also inventory requirements from the agreed source set, including those absent from the draft. Record each requirement's applicability, project evidence, report location, and unresolved status. Mark unread or unavailable material; coherent mapped claims alone do not establish complete coverage.
 
 For each material claim, retain:
 
@@ -250,7 +252,7 @@ For a report built from standards, link requirement and exact clause → applica
 
 ## Reference: references/review.md
 
-Use for complex work or requested audits; the core's two passes suffice for short edits. This is an editorial rubric, not a scientific quality scale.
+Use for requested critique or an unresolved editorial defect; the core's two passes suffice otherwise. Interdependent text alone does not require this guide. This is an editorial rubric, not a scientific quality scale.
 
 ### Resolve blocking defects first
 
