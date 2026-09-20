@@ -81,11 +81,13 @@ class PackagingTests(unittest.TestCase):
     def test_extended_resolves_runtime_links_and_excludes_offline_research(self) -> None:
         self.write("skills/chtets/references/review.md", "# Review\n\n"
                    "Use [composition](composition.md) for a broken connection.\n"
+                   "Follow [dependencies](meaning-map.md) for distant changes.\n"
                    "```text\n# Preserve this example heading\n```\n")
         prompt = portable_prompt(self.root, extended=True)
         for name in RUNTIME_REFERENCES:
             self.assertIn(f"## Reference: references/{name}", prompt)
         self.assertIn('composition (see "Reference: references/composition.md")', prompt)
+        self.assertIn('dependencies (see "Reference: references/meaning-map.md")', prompt)
         self.assertNotIn("OFFLINE_RESEARCH_SENTINEL", prompt)
         self.assertIn("```text\n# Preserve this example heading\n```", prompt)
         self.assertFalse(any(local_target(self.root / "docs/portable-prompt-extended.md", match.group(1))
@@ -111,6 +113,7 @@ class PackagingTests(unittest.TestCase):
             names = set(archive.namelist())
             self.assertIn("chtets/SKILL.md", names)
             self.assertIn("chtets/LICENSE", names)
+            self.assertIn("chtets/references/meaning-map.md", names)
             self.assertFalse(any("research/" in name or "evaluations/" in name or "docs/" in name for name in names))
         with zipfile.ZipFile(source) as archive:
             names = set(archive.namelist())

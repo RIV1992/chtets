@@ -2,6 +2,12 @@
 
 Separate four questions: does the package install, does the agent follow it, does the result preserve meaning, and does a reader prefer the writing?
 
+## Version 1.2.0: optional meaning map
+
+This release adds traceable dependencies across report sections, an explicit change-propagation procedure, and standards-reading guidance on editions, applicability, exceptions, and project evidence. The [release check](../evaluations/meaning-map-v1/README.md) preserves an eight-task comparison with v1.1.1. Read its findings and limitations before interpreting the addition as an improvement.
+
+The larger planned experiment and ablation are deferred in favor of a functional release before field use. No real standards, full-length report, human voice panel, or long-context retrieval test has been evaluated here. Current instruction sizes are in the [generated report](context-size.json); the historical counts below describe their original releases.
+
 ## Version 1.1.0: compact workflow
 
 A fresh synthetic set compared the previous public instructions with a compact version: 36 tasks, 12 each in English, French, and Russian. Separate writers did not see the rubrics; separate model judges received anonymous, shuffled pairs. No critical failures were reported for either condition. There were 35 ties and one preference for the compact version, involving a minor continuity issue in a French fictional scene. A stricter reading could classify that original-version issue as a constraint failure.

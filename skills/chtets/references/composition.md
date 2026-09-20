@@ -2,6 +2,8 @@
 
 Use for an unclear point, gaps between ideas, or heavy prose. For a local change, repair the passage and its connections. These are editorial guidelines, not a QuestBench-validated writing method.
 
+When a change reaches distant sections, use the [meaning map](meaning-map.md) to find affected passages; then restore readable progression without imposing the map's structure on the prose.
+
 ## Find the progression
 
 Separate topic from purpose: explaining a delay may serve a request for time or help. Identify the point and what readers need to assess it. A scene or many-voiced essay may have a progression rather than one thesis.
