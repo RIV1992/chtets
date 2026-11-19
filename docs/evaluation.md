@@ -2,6 +2,10 @@
 
 Separate four questions: does the package install, does the agent follow it, does the result preserve meaning, and does a reader prefer the writing?
 
+## November 2026 source-merging check
+
+Two new synthetic tasks compared the published 1.2.1 instructions with a candidate. Anonymous review found no material difference on either task. The [trial record](../evaluations/merge-check-2026-11/README.md) preserves the briefs, criteria, outputs and exact candidate changes for future review.
+
 ## Version 1.2.1: maintenance checks
 
 Three fresh agents each handled one new synthetic request using the public candidate: a short conditional message, a completeness audit against a fictional contract and amendment, and a denominator correction across report sections. Requests and acceptance criteria were recorded before execution; writers saw neither criteria nor other outputs. The parent model reviewed the results against the original requests. The [record](../evaluations/maintenance-v1.2.1/results.json) preserves requests, criteria, outputs, runtime hashes, reported reads, and review notes.

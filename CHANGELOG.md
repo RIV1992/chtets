@@ -1,5 +1,9 @@
 # Changelog
 
+**19 November 2026 · Evaluation update for 1.2.1**
+
+Added a repeatable source-merging check and a short French email control. Both the published instructions and the experimental revision preserved the dated exception and the original observation in the bulletin. The email replies matched exactly. The published editorial instructions remain at 1.2.1. [Cases, first outputs and trial limits](evaluations/merge-check-2026-11/README.md).
+
 ## 1.2.1 — 2026-09-20
 
 - Check that the README version, release and archive links, top changelog entry, package version, and supplied release tag agree; reject mislabeled archive builds.
